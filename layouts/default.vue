@@ -1,20 +1,46 @@
 <template>
   <div>
-    <Nuxt />
+    
+    <MobileNavigation :navStatus="navStatus"/>
+    <div class="global" :class="{ 'navActive' : navStatus }">
+      <TopBar/>
+      <SiteHeader
+      @toggle-nav="toggleNav"/>
+      <Nuxt />
+    </div>
+
   </div>
 </template>
 
+<script>
+// Components
+import TopBar from '@/components/Global/TopBar'
+import MobileNavigation from '@/components/Global/MobileNavigation'
+import SiteHeader from '@/components/Global/SiteHeader'
+
+export default {
+  data() {
+    return {
+      navStatus: false,
+
+    }
+  },
+  components: {
+    TopBar,
+    MobileNavigation,
+    SiteHeader
+  },
+  methods: {
+    toggleNav() {
+      this.navStatus = !this.navStatus
+    }
+  }
+}
+</script>
+
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -31,32 +57,25 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.navActive {
+  position: absolute;
+  width: 100%;
+  left: 100% - 60px;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+/* Global Styles */
+.globWrap {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 40px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+/* Variables */
+:root {
+  --main-bg-color: #131313;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+@media only screen and (max-width: 768px) {
+  .globWrap {padding: 0 20px;}
 }
 </style>
