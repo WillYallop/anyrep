@@ -13,8 +13,11 @@ export default {
     ]
   },
   css: [
+    'swiper/dist/css/swiper.css',
   ],
   plugins: [
+    { src: '~/plugins/vue-awesome-swiper.js', ssr: false },
+
   ],
   components: true,
   buildModules: [
@@ -26,5 +29,9 @@ export default {
   ],
   axios: {},
   build: {
+  },
+  server: {     
+    port: 8000,
+    host: '0.0.0.0',  
   }
 }

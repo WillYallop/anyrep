@@ -70,7 +70,7 @@ export default {
 @media only screen and (max-width: 768px) {
     /* Desktop */
     .headerUl {display: none;}
-
+    .headerCon {padding: 30px 0 60px;}
     /* Mobile */
     .navigationBtn {display: block;}
     .headerWrap {align-items: center;}

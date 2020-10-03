@@ -1,6 +1,11 @@
 <template>
-    <div>
-
+    <div class="compCon evenPad">
+        <div class="compWrap globWrap">
+            <div class="introCon">
+                <h2 class="componentTitle">{{title}}</h2>
+                <p class="componentBody">{{body}}</p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -11,7 +16,9 @@ export default {
 
         }
     },
-    data: {
+    props: {
+        title: String,
+        body: String
 
     },
     methods: {
@@ -21,5 +28,9 @@ export default {
 </script>
 
 <style scoped>
-
+.introCon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 </style>
