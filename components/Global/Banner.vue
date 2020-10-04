@@ -22,14 +22,14 @@
                             </select>
                             <label for="appMake" class="hideLabel">Appliance Make</label>
                             <select id="appMake" class="selectStyle">
-                                <option value="1">Choose the appliance type</option>
+                                <option value="1">Choose the appliance make</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                             </select>
                             <label for="appModel" class="hideLabel">Appliance Model</label>
                             <select id="appModel" class="selectStyle">
-                                <option value="1">Choose the appliance type</option>
+                                <option value="1">Choose the appliance model</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="imageCol">
-                <img class="bannerImg" src="../../assets/images/phoneImg.png" alt="EXODIA app preview on mobile" draggable="false">
+                <img class="bannerImg" src="../../assets/images/bannerImgPhone.png" alt="Call Anyrep Appliance Repairs" draggable="false">
             </div>
 
         </div>
@@ -135,6 +135,7 @@ export default {
     background-color: #201C42;
     border-radius: 20px;
     padding: 20px 20px 40px;
+    border: 1px solid #312B64;
 }
 .formInner {
     height: 100%;
@@ -186,8 +187,8 @@ export default {
     padding: 0 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #CBCBCB;
-    background-color: #FFF;
+    border: 1px solid #ECECEC;
+    background-color: #FAFAFA;
 }
 .selectStyle::placeholder {
     color: #1C1C1C;
@@ -198,9 +199,9 @@ export default {
     height: 100px;
     resize: none;
     border-radius: 5px;
-    border: 1px solid #CBCBCB;
+    border: 1px solid #ECECEC;
     font-size: 14px;
-    background-color: #FFF;
+    background-color: #FAFAFA;
 }
 .textareaStyle::placeholder {
     color: #1C1C1C;
@@ -234,9 +235,10 @@ export default {
     .textareaCol {width: 100%; padding: 0 0 20px;}
     .btnCon {display: none;}
     .formCol {width: 100%;}
-    .formContainer { position: relative; padding: 20px 10px 40px;}
+    .formContainer { position: relative; padding: 20px 10px 40px; background-color: #000000; border: 1px solid #2C2B2B;}
     .formInner {padding: 15px;}
     .imageCol {display: flex;}
+
 }
 
 @media only screen and (max-width: 525px) {

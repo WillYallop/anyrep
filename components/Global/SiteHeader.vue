@@ -2,7 +2,7 @@
   <header class="headerCon">
       <div class="headerWrap globWrap">
             <img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo">
-            <button class="navigationBtn" v-on:click="$emit('toggle-nav')">=</button>
+            <button class="navigationBtn" v-on:click="$emit('toggle-nav')"><img src="../../assets/images/hamburger.svg" alt=""></button>
             <ul class="headerUl">
                 <li><nuxt-link to="/">Home</nuxt-link></li>
                 <li><nuxt-link to="/services">Services</nuxt-link></li>
@@ -65,6 +65,14 @@ export default {
     display: none;
     height: 40px;
     width: 40px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+.navigationBtn img {
+    height: 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -72,7 +80,7 @@ export default {
     .headerUl {display: none;}
     .headerCon {padding: 30px 0 60px;}
     /* Mobile */
-    .navigationBtn {display: block;}
-    .headerWrap {align-items: center;}
+    .navigationBtn {display: flex;}
+    
 }
 </style>
