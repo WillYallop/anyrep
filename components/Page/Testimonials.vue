@@ -69,8 +69,8 @@ export default {
     padding: 0 10px;
 }
 .testimonialCardInner {
-    background-color: #FFF;
-    border-radius: 10px;
+    background-color: var(--main-bg-box-color);
+    border-radius: 20px;
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -79,7 +79,7 @@ export default {
     height: 100%;
     width: 100px;
     min-width: 100px;
-    background-color: #F3F3F3;
+    background-color: var(--main-bg-color);
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -95,9 +95,11 @@ export default {
 .testTitle {
     margin-bottom: 10px;
     font-size: 20px;
+    color: var(--title-text);
 }
 .testBody {
     margin-bottom: 10px;
+    color: var(--body-text);
 }
 .ratingImg {
     height: 15px;

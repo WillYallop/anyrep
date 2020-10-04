@@ -12,6 +12,7 @@
     clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
     position: relative;
     z-index: 0;
+    margin-bottom: -1px;
 }
 
 @media only screen and (max-width: 768px) { 

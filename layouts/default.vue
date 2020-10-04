@@ -122,14 +122,13 @@ button:focus {outline: none; border: none;}
 }
     /* Component Style */
 .componentTitle {
-  font-size: 26px;
-  color: #FFF;
+  font-size: 20px;
+  color: var(--title-text);
   width: 100%;
-  max-width: 900px;
-  margin-bottom: 20px;
+  max-width: 250px;
 }
 .componentBody {
-  color: #FFF;
+  color: var(--body-text);
   width: 100%;
   max-width: 900px;
 }
@@ -153,8 +152,13 @@ button:focus {outline: none; border: none;}
 /* Variables */
 :root {
   --main-bg-color: #110F26;
+  --main-bg-box-color: #201C42;
   --main-accent-color: #EB0F0F;
   --secondary-bg-color: #0075C3;
+
+  --title-text: #FFF;
+  --highlight-text: #028DE9;
+  --body-text: #F3F3F3;
 }
 
 /* Site background */

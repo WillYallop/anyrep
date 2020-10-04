@@ -132,10 +132,10 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #201C42;
+    background-color: #000000;
     border-radius: 20px;
     padding: 20px 20px 40px;
-    border: 1px solid #312B64;
+    border: 1px solid #2C2B2B;
 }
 .formInner {
     height: 100%;
@@ -235,7 +235,7 @@ export default {
     .textareaCol {width: 100%; padding: 0 0 20px;}
     .btnCon {display: none;}
     .formCol {width: 100%;}
-    .formContainer { position: relative; padding: 20px 10px 40px; background-color: #000000; border: 1px solid #2C2B2B;}
+    .formContainer { position: relative; padding: 20px 10px 40px;}
     .formInner {padding: 15px;}
     .imageCol {display: flex;}
 

@@ -12,6 +12,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 100%);
     position: relative;
     z-index: 0;
+    margin-top: -1px;
 }
 @media only screen and (max-width: 768px) { 
     .slantContainer {height: 80px;}

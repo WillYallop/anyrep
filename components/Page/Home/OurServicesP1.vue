@@ -10,7 +10,7 @@
                 </div>
                 <div class="servicesRow"> 
                     <h4>{{service.title}}</h4>
-                    <p class="subHeadingHighlight">{{service.highlightText}}</p>
+                    <h5 class="subHeadingHighlight">{{service.highlightText}}</h5>
                     <p class="rowBodyP">{{service.body}}</p>
                     <nuxt-link class="aStyle1" :to="service.btnHref">{{service.btnText}}</nuxt-link>
                 </div>
@@ -97,16 +97,16 @@ export default {
 }
 
 .servicesRow h4 {
-    color: #FFF;
+    color: var(--title-text);
     font-size: 20px;
 }
 .subHeadingHighlight {
-    color: #028DE9;
+    color: var(--highlight-text);
     font-size: 14px;
     margin: 10px 0 20px;
 }
 .rowBodyP {
-    color: #F0F0F0;
+    color: var(--body-text);;
     font-size: 16px;
 }
 

@@ -3,6 +3,7 @@
         <div class="compWrap globWrap">
             <div class="introCon">
                 <h2 class="componentTitle">{{title}}</h2>
+                <h5 class="subHeadingHighlight">The number one place to dive into your Spotify progression</h5>
                 <p class="componentBody">{{body}}</p>
             </div>
         </div>
@@ -32,5 +33,14 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: var(--main-bg-box-color);
+    border-radius: 20px;
+    padding: 30px;
 }
+.subHeadingHighlight {
+    color: var(--highlight-text);
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
 </style>

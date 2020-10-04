@@ -20,13 +20,26 @@
     <OurSevicesP1/>
     <SlantBottom/>
 
-    <!-- Testimonials -->
-    <Testimonials/>
+    <!-- Accordion -->
+    <Accordion
+    :accordionData="accordionData"/>
 
     <!-- Our Services Part 2 -->
     <SlantTop/>
     <OurSevicesP2/>
     <SlantBottom/>
+
+    <!-- Testimonials -->
+    <Testimonials/>
+
+    <!-- Contact -->
+    <SlantTop/>
+    <Contact/>
+    <SlantBottom/>
+
+    <!-- Call To Action -->
+    <CallToAction/>
+
   </div>
 </template>
 
@@ -34,16 +47,24 @@
 // Components
 import SlantTop from '@/components/SlantsComponents/SlantTop'
 import SlantBottom from '@/components/SlantsComponents/SlantBottom'
-import Banner from '@/components/Global/Banner'
+import Banner from '@/components/Page/Banner'
 import PageIntro from '@/components/Page/PageIntro'
-import Testimonials from '@/components/Page/Testimonials'
 import OurSevicesP1 from '@/components/Page/Home/OurServicesP1'
+import Accordion from '@/components/Page/accordion'
 import OurSevicesP2 from '@/components/Page/Home/OurServicesP2'
+import Testimonials from '@/components/Page/Testimonials'
+import Contact from '@/components/Page/Contact'
+import CallToAction from '@/components/Page/CallToAction'
 
 export default {
   data() {
     return {
-
+      accordionData: [
+        { id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.' },
+        { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: false },
+        { id: 3, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: [ '/contact', 'Contact Us' ] },
+        { id: 4, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: false }
+      ]
     }
   },
   mounted() {
@@ -55,7 +76,9 @@ export default {
     Banner,
     PageIntro,
     OurSevicesP1,
-    OurSevicesP2
+    OurSevicesP2,
+    Contact,
+    CallToAction
   },
   methods: {
 
