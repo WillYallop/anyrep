@@ -1,7 +1,8 @@
 <template>
   <div>
 
-    <MobileNavigation :navStatus="navStatus"/>
+    <MobileNavigation :navStatus="navStatus"
+    @toggle-nav="toggleNav"/>
     <div class="pageGroup" :class="{ 'navActive' : navStatus }">
       <TopBar/>
       <SiteHeader

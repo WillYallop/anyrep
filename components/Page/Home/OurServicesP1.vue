@@ -1,7 +1,7 @@
 <template>
     <div class="serviceCon compCon">
-        
         <div class="compWrap globWrap oddPad">
+            
             <div class="servicesRowContainer" :key="service.id" v-for="service in services"> 
                 <div class="rowImageContainer" :style="{ backgroundImage: `url(${getImageUrl(service.image)})` }">
                     <div class="rowImageOverlay">
@@ -25,9 +25,10 @@ export default {
     data() {
         return {
             services: [
-                { id: 1, image: 'washingMachine.jpg', title: 'Washing Machines', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/washing-machine-repairs', btnText: 'Find out more' },
-                { id: 2, image: 'friedgeAndFreezer.jpg', title: 'Fridges & Freezers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/fridge-and-freezer-repairs', btnText: 'Find out more' },
-                { id: 3, image: 'dishwasher.jpg', title: 'Dishwashers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/dishwasher-repairs', btnText: 'Find out more' }
+                { id: 1, image: 'washingMachine.jpg', title: 'Washing Machines', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/washing-machine', btnText: 'Find out more' },
+                { id: 2, image: 'friedgeAndFreezer.jpg', title: 'Fridges & Freezers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/fridge-freezer', btnText: 'Find out more' },
+                { id: 3, image: 'hob.jpg', title: 'Hobs', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/hob', btnText: 'Find out more' },
+                { id: 4, image: 'dishwasher.jpg', title: 'Dishwashers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/dishwasher', btnText: 'Find out more' }
             ]
         }
     },

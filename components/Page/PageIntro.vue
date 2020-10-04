@@ -3,7 +3,7 @@
         <div class="compWrap globWrap">
             <div class="introCon">
                 <h2 class="componentTitle">{{title}}</h2>
-                <h5 class="subHeadingHighlight">The number one place to dive into your Spotify progression</h5>
+                <h5 class="subHeadingHighlight">{{subTitle}}</h5>
                 <p class="componentBody">{{body}}</p>
             </div>
         </div>
@@ -19,6 +19,7 @@ export default {
     },
     props: {
         title: String,
+        subTitle: String,
         body: String
 
     },
