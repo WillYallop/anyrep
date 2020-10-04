@@ -107,7 +107,7 @@ export default {
     left: 40px;
 }
 .imageCon img {
-    height: 500px;
+    height: 520px;
 }
 
 @media only screen and (max-width: 768px) {

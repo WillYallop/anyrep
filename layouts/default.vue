@@ -213,6 +213,7 @@ button:focus {outline: none; border: none;}
   border: none;
   background-color: var(--main-accent-color);
   z-index: 1000;
+  cursor: pointer;
 }
 .toggleNavBtn img {
   height: 15px;
@@ -224,6 +225,8 @@ button:focus {outline: none; border: none;}
   .oddPad {padding-top: 60px;padding-bottom: 60px;}
 }
 @media only screen and (min-width: 768px) {
+  .toggleNavBtn {display: none;}
   .pageGroup.navActive {right: 0;}
+  .siteBackground.navActive {right: 0;}
 }
 </style>

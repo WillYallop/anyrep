@@ -6,22 +6,25 @@
                 <h4 class="componentTitle">What our clients have to say about Anyrep</h4>
                 <h5 class="subHeadingHighlight">You can leave us a review on our facebook or Google.</h5>
             </div>
-            <div class="swipeCon" v-swiper:mySwiper="swiperOptions">
-                <div class="swiper-wrapper">
-                    <div class="testimonialCard swiper-slide" :key="testimonial.id" v-for="testimonial in testimonials">
-                        <div class="testimonialCardInner">
-                            <div class="profileHolder">
-                                <img src="../../assets/images/testimonial.jpg" alt="Testimonial Image">
-                            </div>
-                            <div class="textArea">
-                                <h4 class="testTitle">{{testimonial.name}}</h4>
-                                <p class="testBody">{{testimonial.body}}</p>
-                                <img class="ratingImg" src="../../assets/images/rating.png" alt="">
+            <div class="swiperContainer">
+                <div class="swipeCon" v-swiper:mySwiper="swiperOptions">
+                    <div class="swiper-wrapper">
+                        <div class="testimonialCard swiper-slide" :key="testimonial.id" v-for="testimonial in testimonials">
+                            <div class="testimonialCardInner">
+                                <div class="profileHolder">
+                                    <img src="../../assets/images/testimonial.jpg" alt="Testimonial Image">
+                                </div>
+                                <div class="textArea">
+                                    <h4 class="testTitle">{{testimonial.name}}</h4>
+                                    <p class="testBody">{{testimonial.body}}</p>
+                                    <img class="ratingImg" src="../../assets/images/rating.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="swiperPaginationCon">
                 <div class="swiper-pagination" slot="pagination"></div>
             </div>
@@ -73,9 +76,12 @@ export default {
     margin: 10px 0 0;
 }
 /* Swiper */
-.swipeCon { 
+.swiperContainer {
     width: calc(100% + 20px);
     margin-left: -10px;
+}
+.swipeCon { 
+    width: 100%;
     border-radius: 10px;
 }
 .testimonialCard {
@@ -134,7 +140,6 @@ export default {
 }
 
 @media only screen and (max-width: 1000px) {
-    .swipeCon {width: 100%; margin-left: 0;}
     .testimonialCard {width: 100%; padding: 0 10px;}
 }
 @media only screen and (max-width: 470px) {

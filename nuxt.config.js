@@ -26,8 +26,14 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
 
   ],
+  sitemap: {
+    hostname: 'https://anyrep.com',
+    gzip: true,
+
+  },
   axios: {},
   build: {
   },
