@@ -40,6 +40,10 @@
     <!-- Call To Action -->
     <CallToAction/>
 
+    <!-- Footer -->
+    <SlantTop/>
+    <SiteFooter/>
+
   </div>
 </template>
 
@@ -55,6 +59,7 @@ import OurSevicesP2 from '@/components/Page/Home/OurServicesP2'
 import Testimonials from '@/components/Page/Testimonials'
 import Contact from '@/components/Page/Contact'
 import CallToAction from '@/components/Page/CallToAction'
+import SiteFooter from '@/components/Global/SiteFooter'
 
 export default {
   data() {
@@ -78,7 +83,8 @@ export default {
     OurSevicesP1,
     OurSevicesP2,
     Contact,
-    CallToAction
+    CallToAction,
+    SiteFooter
   },
   methods: {
 

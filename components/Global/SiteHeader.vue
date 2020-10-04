@@ -15,17 +15,17 @@
 
 <script>
 export default {
-  data() {
-    return {
+    data() {
+        return {
+
+        }
+    },
+    mounted() {
+
+    },
+    methods: {
 
     }
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
 }
 </script>
 
@@ -37,6 +37,7 @@ export default {
     display: flex;
     justify-content: center;
 }
+
 .headerWrap {
     display: flex;
     justify-content: space-between;
@@ -44,6 +45,7 @@ export default {
 }
 .siteLogo {
     height: 60px;
+    transition: 0.3s;
 }
 .headerUl {
     padding: 0;
@@ -75,12 +77,13 @@ export default {
     height: 15px;
 }
 
+
+
 @media only screen and (max-width: 768px) {
     /* Desktop */
     .headerUl {display: none;}
-    .headerCon {padding: 30px 0 60px;}
+    .headerCon {padding: 30px 0; }
     /* Mobile */
     .navigationBtn {display: flex;}
-    
 }
 </style>

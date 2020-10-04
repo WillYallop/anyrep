@@ -230,7 +230,7 @@ export default {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) { 
-    .compWrap {flex-wrap: wrap; margin-bottom: 60px;}
+    .compWrap {flex-wrap: wrap; margin: 30px 0 60px;}
     .banGroup1 {width: 80%;}
     .textareaCol {width: 100%; padding: 0 0 20px;}
     .btnCon {display: none;}

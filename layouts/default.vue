@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+
     <MobileNavigation :navStatus="navStatus"/>
     <div class="pageGroup" :class="{ 'navActive' : navStatus }">
       <TopBar/>
@@ -9,7 +9,7 @@
       <Nuxt />
     </div>
     <div class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
-
+    <button v-show="scrollPos > 200 || navStatus" v-on:click="navStatus = !navStatus" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       navStatus: false,
-
+      scrollPos: 0
     }
   },
   components: {
@@ -34,6 +34,19 @@ export default {
   methods: {
     toggleNav() {
       this.navStatus = !this.navStatus
+    },
+    headerScrolled() {
+      this.scrollPos = window.scrollY
+    },
+  },
+  created() {
+    if (process.client) { 
+      window.addEventListener('scroll', this.headerScrolled);
+    }
+  },
+  destroyed() {
+    if (process.client) { 
+      window.removeEventListener('scroll', this.headerScrolled);
     }
   }
 }
@@ -151,6 +164,7 @@ button:focus {outline: none; border: none;}
 
 /* Variables */
 :root {
+  --head-foot-bg-color: #090815;
   --main-bg-color: #110F26;
   --main-bg-box-color: #201C42;
   --main-accent-color: #EB0F0F;
@@ -186,6 +200,22 @@ button:focus {outline: none; border: none;}
   bottom: -56px;
   background-color: var(--secondary-bg-color);
   opacity: 0.85;
+}
+
+/* Toggle Nav Btn */
+.toggleNavBtn {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background-color: var(--main-accent-color);
+  z-index: 1000;
+}
+.toggleNavBtn img {
+  height: 15px;
 }
 
 @media only screen and (max-width: 768px) {

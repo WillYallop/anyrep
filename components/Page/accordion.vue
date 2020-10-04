@@ -66,9 +66,9 @@ export default {
 /* Accordion */
 .accCon {
     background-color: var(--main-bg-color);
-    padding: 60px 30px 30px;
+    padding: 30px;
     border-radius: 20px;
-    margin-top: -30px;
+    margin-top: 20px;
     z-index: 0;
     position: relative;
 }

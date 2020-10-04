@@ -1,6 +1,11 @@
 <template>
     <div class="compCon evenPad">
         <div class="compWrap globWrap">
+
+            <div class="testimonialHeader">
+                <h4 class="componentTitle">What our clients have to say about Anyrep</h4>
+                <h5 class="subHeadingHighlight">You can leave us a review on our facebook or Google.</h5>
+            </div>
             <div class="swipeCon" v-swiper:mySwiper="swiperOptions">
                 <div class="swiper-wrapper">
                     <div class="testimonialCard swiper-slide" :key="testimonial.id" v-for="testimonial in testimonials">
@@ -55,7 +60,18 @@ export default {
 .compWrap {
     flex-wrap: wrap;
 }
-
+.testimonialHeader {
+    width: 100%;
+    background-color: var(--main-bg-box-color);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.subHeadingHighlight {
+    color: var(--highlight-text);
+    font-size: 14px;
+    margin: 10px 0 0;
+}
 /* Swiper */
 .swipeCon { 
     width: calc(100% + 20px);

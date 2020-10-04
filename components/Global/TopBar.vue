@@ -30,7 +30,7 @@ export default {
 .topBarCon {
     width: 100%;
     height: 30px;
-    background-color: #000000;
+    background-color: var(--head-foot-bg-color);
     display: flex;
     justify-content: center;
 }
