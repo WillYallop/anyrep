@@ -17,6 +17,7 @@ export default {
     'swiper/dist/css/swiper.css',
   ],
   plugins: [
+    {src: "~plugins/persistedstate.js", ssr: false},
     { src: '~/plugins/vue-awesome-swiper.js', ssr: false },
 
   ],

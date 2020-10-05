@@ -6,7 +6,7 @@
                 <!-- Opening Hours -->
                 <div class="openingCol">
                     <p class="componentBody">Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier.</p>
-                    <nuxt-link to='/quote' class="quoteLink">Get a Quote Now</nuxt-link>
+                    <nuxt-link to='/book' class="quoteLink">Book Now</nuxt-link>
 
                     <div class="businessInfoCon">
                         <h4 class="componentTitle">Address:</h4>
@@ -23,7 +23,7 @@
                     <div class="col">
                         <h6 class="componentTitle">Links</h6>
                         <nuxt-link to="/">Home</nuxt-link>
-                        <nuxt-link to="/quote">Quote</nuxt-link>
+                        <nuxt-link to="/book">Book</nuxt-link>
                         <nuxt-link to="/store">Store</nuxt-link>
                         <nuxt-link to="/contact">Contact</nuxt-link>
                         <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link>

@@ -1,10 +1,11 @@
 <template>
   <header class="headerCon">
       <div class="headerWrap globWrap">
-            <img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo">
+            <nuxt-link to="/" class="siteLogo"><img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo"></nuxt-link>
             <button class="navigationBtn" v-on:click="$emit('toggle-nav')"><img src="../../assets/images/hamburger.svg" alt=""></button>
             <ul class="headerUl">
                 <li><nuxt-link to="/">Home</nuxt-link></li>
+                <li><nuxt-link to="/book">Book</nuxt-link></li>
                 <li @mouseover="dropdown = true" v-on:click="dropdown = !dropdown">
                     Services
                     <div class="dropdownContainer" v-show="dropdown" @mouseleave="dropdown = false">

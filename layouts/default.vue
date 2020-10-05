@@ -9,7 +9,7 @@
       @toggle-nav="toggleNav"/>
       <Nuxt />
     </div>
-    <div class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
+    <div v-if="$route.path != '/book' && $route.path != '/store'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
     <button v-show="scrollPos > 200 || navStatus" v-on:click="navStatus = !navStatus" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
   </div>
 </template>
@@ -26,6 +26,9 @@ export default {
       navStatus: false,
       scrollPos: 0
     }
+  },
+  mounted() {
+  
   },
   components: {
     TopBar,
@@ -66,7 +69,9 @@ html {
 }
 body {
   width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
+  background-color: #F3F7FF;
 }
 textarea {font-family: 'Source Sans Pro', sans-serif;}
 textarea:focus {outline: none; border: none;}
@@ -225,7 +230,7 @@ button:focus {outline: none; border: none;}
   .evenPad {padding-top: 60px;padding-bottom: 60px;}
   .oddPad {padding-top: 60px;padding-bottom: 60px;}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768.1px) {
   .toggleNavBtn {display: none;}
   .pageGroup.navActive {right: 0;}
   .siteBackground.navActive {right: 0;}

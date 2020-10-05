@@ -2,7 +2,7 @@
   <div class="mobileNav" :class="{ 'active' : navStatus }">
       <nav class="navCon">
         <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/">Home <img src="../../assets/images/homeIcon.svg" alt=""></nuxt-link>
-        <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/quote">Quote <img class="clipboardIcon" src="../../assets/images/clipboardIcon.svg" alt=""></nuxt-link>
+        <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/book">Book <img class="clipboardIcon" src="../../assets/images/clipboardIcon.svg" alt=""></nuxt-link>
         <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/store">Store <img src="../../assets/images/cartIcon.svg" alt=""></nuxt-link>
         <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/contact">Contact <img src="../../assets/images/phoneIcon.svg" alt=""></nuxt-link>
         <div v-on:click="dropdown = !dropdown" class="navLink" to="/">Services <img src="../../assets/images/chevronDownIcon.svg" alt=""></div>
@@ -114,7 +114,7 @@ export default {
   padding-top: 18px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768.1px) {
   .mobileNav.active {right: calc(-100% + 80px);}
 }
 </style>
