@@ -2,29 +2,14 @@
     <div class="formContainer">
         <div class="formInner">
             <label for="appType" class="hideLabel">Appliance Type</label>
-            <select id="appType" class="selectStyle">
-                <option value="1">Choose the appliance type</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
+            <input id="appType" class="selectStyle" placeholder="Appliance Type" v-model="type">
             <label for="appMake" class="hideLabel">Appliance Make</label>
-            <select id="appMake" class="selectStyle">
-                <option value="1">Choose the appliance make</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
+            <input id="appMake" class="selectStyle" placeholder="Appliance Make" v-model="make">
             <label for="appModel" class="hideLabel">Appliance Model</label>
-            <select id="appModel" class="selectStyle">
-                <option value="1">Choose the appliance model</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
+            <input id="appModel" class="selectStyle" placeholder="Appliance Model" v-model="model">
             <label for="appBody" class="hideLabel">What's the issue</label>
-            <textarea id="appBody" class="textareaStyle" placeholder="What's the issue"></textarea>
-            <button class="btnStyle1">Get Quote</button>
+            <textarea id="appBody" class="textareaStyle" placeholder="What's the issue" v-model="issue"></textarea>
+            <button class="btnStyle1" v-on:click="bookRepair">Book Repair</button>
         </div>
 
         <div class="tabletBtnsCon">
@@ -38,7 +23,28 @@
 export default {
     data() {
         return {
+            type: '',
+            make: '',
+            model: '',
+            issue: ''
+        }
+    },
+    methods: {
+        bookRepair() {
+            if(this.type.length > 0) {
+                this.$store.commit('setAppType', this.type)
+            }
+            if(this.make.length > 0) {
+                this.$store.commit('setAppMake', this.make)
+            }
+            if(this.model.length > 0) {
+                this.$store.commit('setAppModel', this.model)
+            }
+            if(this.issue.length > 0) {
+                this.$store.commit('setAppIssue', this.issue)
+            }
 
+            this.$router.push('/book')
         }
     }
 }

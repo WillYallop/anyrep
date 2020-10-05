@@ -2,7 +2,7 @@
     <div class="bookCon compCon">
         <div class="compWrap globWrap oddPad">
             <div class="bookComp">
-                <GetQuote/>
+                <Book/>
             </div>
             <div class="textareaCol">
                 <div class="textarea">
@@ -17,7 +17,7 @@
 
 <script>
 // Components
-import GetQuote from '@/components/Page/GetQuote'
+import Book from '@/components/Page/Book'
 
 export default {
     data() {
@@ -31,7 +31,7 @@ export default {
         body: Array
     },
     components: {
-        GetQuote
+        Book
     }
 }
 </script>

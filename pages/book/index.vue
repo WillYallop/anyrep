@@ -8,9 +8,15 @@
         :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
         <SlantBottom/>
 
+        <!-- Booking Intro -->
         <BookIntro/>
 
+        <!-- Booking Form -->
         <BookForm/>
+
+        <!-- Footer -->
+        <SlantTop/>
+        <SiteFooter/>
 
     </div>
 </template>
@@ -22,6 +28,7 @@ import SlantBottom from '@/components/SlantsComponents/SlantBottom'
 import BookBanner from '@/components/Page/Book/BookBanner'
 import BookIntro from '@/components/Page/Book/BookIntro'
 import BookForm from '@/components/Page/Book/BookForm'
+import SiteFooter from '@/components/Global/SiteFooter'
 
 export default {
     data() {
@@ -34,7 +41,8 @@ export default {
         SlantBottom,
         BookBanner,
         BookIntro,
-        BookForm
+        BookForm,
+        SiteFooter
 
     },
     methods: {

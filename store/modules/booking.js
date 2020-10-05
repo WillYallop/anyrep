@@ -60,6 +60,30 @@ const mutations = {
     },
     setEmail(state, data) {
         state.book.contact.email = data;
+    },
+
+    // Reset
+    resetBooking(state) {
+        state.book = {
+            appliance: {
+                type: '',
+                make: '', 
+                model: '',
+                issue: ''
+            },
+            personal: {
+                fName: '', 
+                lName: '', 
+                postCode: '', 
+                address: '', 
+                town: '', 
+                county: ''
+            },
+            contact: {
+                phone: '',
+                email: ''
+            }
+        }
     }
 }
 

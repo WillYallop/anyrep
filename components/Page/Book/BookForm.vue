@@ -19,7 +19,7 @@
                             <input class="inputStyle inputBotMarg" type="text" id="appMake" v-model="make" :class="{ 'validationError' : !verifyAppMake, 'fieldError' : fieldError[1] }">
                             <!-- Appliance Model -->
                             <label for="appModel">Appliance Model</label>
-                            <input class="inputStyle" type="text" id="appModel" v-model="model">
+                            <input class="inputStyle" type="text" id="appModel" v-model="model" :class="{ 'validationError' : !verifyAppModel, 'fieldError' : fieldError[10] }">
                         </div>
                         <div class="inputCol">
                             <!-- Appliance Issues -->
@@ -49,7 +49,7 @@
                         <div class="inputCol">
                             <!-- Last Name -->
                             <label for="lName">Last Name</label>
-                            <input class="inputStyle inputBotMarg" type="text" id="lName" v-model="lName">
+                            <input class="inputStyle inputBotMarg" type="text" id="lName" v-model="lName" :class="{ 'validationError' : !verifyLName, 'fieldError' : fieldError[11] }">
                             <!-- Address -->
                             <label for="address">Address <span class="requiredInput">*</span></label>
                             <input class="inputStyle inputBotMarg" type="text" id="address" v-model="address" :class="{ 'validationError' : !verifyAddress, 'fieldError' : fieldError[5] }">
@@ -97,7 +97,7 @@
                     </div>
 
                     <p v-if="errorMsg" class="termsError">{{errorMsg}}</p>
-                    <p v-if="fieldEmptyArray.length > 0" class="fieldErrorP">Make sure to fill in all of the required fields!</p>
+                    <p v-if="fieldEmptyArray.length > 0" class="fieldErrorP">Make sure all fields are filled in and contain valid characters!</p>
                     <p v-if="successMsg" class="bookSuccessP">{{successMsg}}</p>
                    
                     <button class="btnStyle1" v-on:click="bookRepair">Book repair</button>
@@ -115,8 +115,8 @@ import axios from 'axios'
 export default {
     data() {
         return {
-            dataApproved: [ false, false, false, false, false, false, false, false, false, false ],
-            fieldError: [ false, false, false, false, false, false, false, false, false, false ],
+            dataApproved: [ false, false, false, false, false, false, false, false, false, false, false, false ],
+            fieldError: [ false, false, false, false, false, false, false, false, false, false, false, false ],
 
             termsAccepted: false,
 
@@ -130,6 +130,7 @@ export default {
             fieldEmptyArray: [],
             errorMsg: false,
             successMsg: false
+
         }
     },
     computed: {
@@ -381,7 +382,41 @@ export default {
                 this.dataApproved[9] = false
                 return false
             }
+        },
+        // Verify non required fields
+        verifyAppModel() {
+            if(this.model.length > 0) { 
+                if(this.stringRegex.test(this.model)) {
+                    this.dataApproved[10] = true
+                    this.fieldError[10] = false
+                    return true
+                } else {
+                    this.dataApproved[10] = false
+                    return false
+                } 
+            } else {
+                this.dataApproved[10] = true
+                this.fieldError[10] = false
+                return true
+            }
+        },
+        verifyLName() {
+            if(this.lName.length > 0) { 
+                if(this.stringRegex.test(this.lName)) {
+                    this.dataApproved[11] = true
+                    this.fieldError[11] = false
+                    return true
+                } else {
+                    this.dataApproved[11] = false
+                    return false
+                } 
+            } else {
+                this.dataApproved[11] = true
+                this.fieldError[11] = false
+                return true
+            }
         }
+
     },
     methods: {
         verifyData() {
@@ -397,17 +432,29 @@ export default {
                 // Approved
                 // Reset errors
                 this.fieldEmptyArray = []
-                this.fieldError = [ false, false, false, false, false, false, false, false, false, false ]
+                this.fieldError = [ false, false, false, false, false, false, false, false, false, false, false, false ]
                 if(this.termsAccepted) {
                     this.errorMsg = false
                     console.log(this.$store.state.booking.book)
                     // Post results
-                    axios.post('https://williamyallop.com/api/v1/anyrep/booking', {
-                        booking: this.$store.state.booking.book
+                    axios.post('https://api.williamyallop.com/v1/anyrep/email/book', {
+                        type: this.$store.state.booking.book.appliance.type,
+                        make: this.$store.state.booking.book.appliance.make,
+                        model: this.$store.state.booking.book.appliance.model, 
+                        issue: this.$store.state.booking.book.appliance.issue, 
+                        fName: this.$store.state.booking.book.personal.fName, 
+                        lName: this.$store.state.booking.book.personal.lName, 
+                        postCode: this.$store.state.booking.book.personal.postCode, 
+                        address: this.$store.state.booking.book.personal.address, 
+                        town: this.$store.state.booking.book.personal.town, 
+                        county: this.$store.state.booking.book.personal.county, 
+                        phone: this.$store.state.booking.book.contact.phone, 
+                        email: this.$store.state.booking.book.contact.email
                     })
                     .then((response) => {
                         if(response.data.message === 'success') {
                             this.successMsg = 'Thank you for booking your appliance repair with Anyrep. A member of staff will contact you shortly to arrange a time and date.'
+                            this.$store.commit('resetBooking')
                         }
                     })
                     .catch((err) => {
@@ -419,7 +466,7 @@ export default {
             } else {
                 // Reset errors
                 this.fieldEmptyArray = []
-                this.fieldError = [ false, false, false, false, false, false, false, false, false, false ]
+                this.fieldError = [ false, false, false, false, false, false, false, false, false, false, false, false ]
 
                 // Not Approved
                 if(!this.dataApproved[0]) {
@@ -461,6 +508,14 @@ export default {
                 if(!this.dataApproved[9]) {
                     this.fieldEmptyArray.push('Email')
                     this.fieldError[9] = true
+                }
+                if(!this.dataApproved[10]) {
+                    this.fieldEmptyArray.push('Model')
+                    this.fieldError[10] = true
+                }
+                if(!this.dataApproved[11]) {
+                    this.fieldEmptyArray.push('Last Name')
+                    this.fieldError[11] = true
                 }
             }
         }
