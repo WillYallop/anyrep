@@ -6,26 +6,26 @@
 
     <!-- Banner -->
     <Banner
-    :title="'Need your Washing'"
-    :title2="'Machine repaired?'"
-    :subTitle="`Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier!`"
-    :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :title="'Get your Commercial Appliance repaired!'"
+    :title2="''"
+    :subTitle="`If you have a faulty Commercial Appliance, don't hesitate to call Anyrep today to get it fixed! Or view our store!`"
+    :buttons="[{id: 1, href: '/book', text: 'Book Now'}, {id: 2, href: '/store', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->
     <PageIntro
-    :title="'Washing Machine Repairs!'"
-    :subTitle="'Over 25 years of experience repairing washing machines.'"
-    :body="`Don’t let your broken washing machine leave you without clean clothes. When your washing machine won’t drain or won't spin, trust Anyrep Domestic & Commercial Appliance Repairs to fix it at the earliest possible opportunity.`"/>
+    :title="'Commercial Appliance Repairs!'"
+    :subTitle="'Over 25 years of experience repairing Commercial Appliances.'"
+    :body="`A sudden breakdown of a commercial appliance can bring a lot of inconvenience and lost profit to your business. That’s why you need experienced professionals who can work quickly and effectively. At Anyrep Appliance Repairs we have the experience and capacity to handle any simple or complex repairs quickly and successfully.`"/>
 
     <!-- What We Fix -->
     <SlantTop/>
     <WhatWeFix
-    :title="'All types of washing machine problems resolved'"
-    :subTitle="'Over 25 years of experience repairing washing machines.'"
-    :body="`Don’t let your broken washing machine leave you without clean clothes. When your washing machine won’t drain or won't spin, trust Anyrep Domestic & Commercial Appliance Repairs to fix it at the earliest possible opportunity.`"
+    :title="'Commercial Appliances that we repair'"
+    :subTitle="'There a multiple things that can go wrong, and we can fix them!'"
+    :body="`We are qualified and experienced in repairing a wide range of Commercial Appliances, so no matter what you have you can rst assured that Anyrep has the technical knowledge to get you Appliance fixed so your business can resume its full operations.`"
     :issuesArray="issuesArray"
-    :image="'washingMachine.jpg'"/> 
+    :image="'commercialAppliances.jpg'"/> 
     <SlantBottom/>
 
     <!-- Accordion -->
@@ -35,7 +35,7 @@
     <!-- Book Today  -->
     <SlantTop/>
     <BookToday 
-    :title="'Book your washing machine repair today'"
+    :title="'Book your Commercial Appliance repair today'"
     :subTitle="'We serve clients throughout Norwich and the surrounding areas.'"
     :body="bookBodyArray"/>
     <SlantBottom/>
@@ -77,24 +77,23 @@ export default {
   data() {
     return {
         issuesArray: [
-            { id: 1, issue: 'Blocked Pumps?' },
-            { id: 2, issue: 'Failing to spin?' },
-            { id: 3, issue: 'Not draining?' },
-            { id: 4, issue: 'Stuck door?' },
-            { id: 5, issue: 'Noisy drum?' },
-            { id: 6, issue: 'Water intake issues?' },
-            { id: 7, issue: 'Water leaks?' },
-            { id: 8, issue: 'Torn door seal?' }
+            { id: 1, issue: 'Refrigerators!' },
+            { id: 2, issue: 'Ovens!' },
+            { id: 3, issue: 'Fryers!' },
+            { id: 4, issue: 'Cookers!' },
+            { id: 5, issue: 'Freezers & Icemakers!' },
+            { id: 6, issue: 'Washers!' },
+            { id: 7, issue: 'Coolers!' }
         ],
         accordionData: [
-            { id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.' },
-            { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: false },
-            { id: 3, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: [ '/contact', 'Contact Us' ] },
-            { id: 4, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: false }
+        { id: 1, title: 'What area do you cover?', body: 'Anyrep Appliance repairs covers the Norwich, Norfolk area. So, if you reside there and need your appliance repaired, don’t hesitate to contact us straight away.', button: false },
+        { id: 2, title: 'How long will my repair take?', body: 'Anyrep always try’s its best to complete your repair on the same day where possible and on average our repairs last between 1 and 2 hours.', button: false },
+        { id: 3, title: 'Will my machine need new parts?', body: 'Depending on the issue with your appliance you may not need parts, however if you do, we keep a stock of common parts so we can still ensure a speedy and professional repair service.', button: false },
+        { id: 4, title: 'How does your pricing work?', body: 'For domestic appliance repairs we charge a fixed rate regardless of how long your appliance takes to repair, and then the costs of parts on top of that if you need them. There are no hidden fees!', button: false }
         ],
         bookBodyArray: [
-            { id: 1, body: 'Our factory-trained technicians can repair washing machines of any make or model, and can also replace any damaged parts quickly.' },
-            { id: 2, body: `If you call us before 10 am, we'll be able to fix your appliance the same day. So, whether you need repair work for your top load, front load, double door or single door washing machine, call us.` },
+          { id: 1, body: 'Our factory-trained technicians can repair Commercial Appliances of any make or model, and can also replace any damaged parts quickly.' },
+          { id: 2, body: `If you call us before 10 am, we'll be able to fix your appliance the same day. So, regardless of the work your Commercial Appliance needs, call us.` },
         ]
     }
   },

@@ -6,26 +6,26 @@
 
     <!-- Banner -->
     <Banner
-    :title="'Need your Washing'"
-    :title2="'Machine repaired?'"
-    :subTitle="`Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier!`"
-    :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :title="'We can repair any Microwave brand!'"
+    :title2="''"
+    :subTitle="`If you have a faulty Microwave, don't hesitate to call Anyrep today to get it fixed! Or view our store for an instant solution!`"
+    :buttons="[{id: 1, href: '/book', text: 'Book Now'}, {id: 2, href: '/store', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->
     <PageIntro
-    :title="'Washing Machine Repairs!'"
-    :subTitle="'Over 25 years of experience repairing washing machines.'"
-    :body="`Don’t let your broken washing machine leave you without clean clothes. When your washing machine won’t drain or won't spin, trust Anyrep Domestic & Commercial Appliance Repairs to fix it at the earliest possible opportunity.`"/>
+    :title="'Microwave Repairs'"
+    :subTitle="'Over 25 years of experience repairing Microwaves.'"
+    :body="`The microwave is the perfect appliance for when you need a quick low effort meal to eat. That’s why at Anyrep we offer our microwave repair service so start using it again as soon as possible. We stock parts for common microwave issues, so we have you covered.`"/>
 
     <!-- What We Fix -->
     <SlantTop/>
     <WhatWeFix
-    :title="'All types of washing machine problems resolved'"
-    :subTitle="'Over 25 years of experience repairing washing machines.'"
-    :body="`Don’t let your broken washing machine leave you without clean clothes. When your washing machine won’t drain or won't spin, trust Anyrep Domestic & Commercial Appliance Repairs to fix it at the earliest possible opportunity.`"
+    :title="'All types of Microwave problems resolved'"
+    :subTitle="'There a multiple things that can go wrong, and we can fix them!'"
+    :body="`If you are experiencing any of the issues seen bellow, or even something different. We assure our services are for you. We keep stock of common parts that go wrong for many brands of Microwaves, and if dont have the part you need, we have a quick supply network that can get us the parts needed within a couple days.`"
     :issuesArray="issuesArray"
-    :image="'washingMachine.jpg'"/> 
+    :image="'microwave.jpg'"/> 
     <SlantBottom/>
 
     <!-- Accordion -->
@@ -35,7 +35,7 @@
     <!-- Book Today  -->
     <SlantTop/>
     <BookToday 
-    :title="'Book your washing machine repair today'"
+    :title="'Book your Microwave repair today'"
     :subTitle="'We serve clients throughout Norwich and the surrounding areas.'"
     :body="bookBodyArray"/>
     <SlantBottom/>
@@ -77,24 +77,23 @@ export default {
   data() {
     return {
         issuesArray: [
-            { id: 1, issue: 'Blocked Pumps?' },
-            { id: 2, issue: 'Failing to spin?' },
-            { id: 3, issue: 'Not draining?' },
-            { id: 4, issue: 'Stuck door?' },
-            { id: 5, issue: 'Noisy drum?' },
-            { id: 6, issue: 'Water intake issues?' },
-            { id: 7, issue: 'Water leaks?' },
-            { id: 8, issue: 'Torn door seal?' }
+            { id: 1, issue: 'Not running?' },
+            { id: 2, issue: 'Not heating?' },
+            { id: 3, issue: 'Tray not spinning?' },
+            { id: 4, issue: 'Exhaust fan broken?' },
+            { id: 5, issue: 'Unusual noise?' },
+            { id: 6, issue: 'Tripping electrics?' }
+            
         ],
         accordionData: [
-            { id: 1, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.' },
-            { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: false },
-            { id: 3, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: [ '/contact', 'Contact Us' ] },
-            { id: 4, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien.', button: false }
+        { id: 1, title: 'What area do you cover?', body: 'Anyrep Appliance repairs covers the Norwich, Norfolk area. So, if you reside there and need your appliance repaired, don’t hesitate to contact us straight away.', button: false },
+        { id: 2, title: 'How long will my repair take?', body: 'Anyrep always try’s its best to complete your repair on the same day where possible and on average our repairs last between 1 and 2 hours.', button: false },
+        { id: 3, title: 'Will my machine need new parts?', body: 'Depending on the issue with your appliance you may not need parts, however if you do, we keep a stock of common parts so we can still ensure a speedy and professional repair service.', button: false },
+        { id: 4, title: 'How does your pricing work?', body: 'For domestic appliance repairs we charge a fixed rate regardless of how long your appliance takes to repair, and then the costs of parts on top of that if you need them. There are no hidden fees!', button: false }
         ],
         bookBodyArray: [
-            { id: 1, body: 'Our factory-trained technicians can repair washing machines of any make or model, and can also replace any damaged parts quickly.' },
-            { id: 2, body: `If you call us before 10 am, we'll be able to fix your appliance the same day. So, whether you need repair work for your top load, front load, double door or single door washing machine, call us.` },
+          { id: 1, body: 'Our factory-trained technicians can repair Microwaves of any make or model, and can also replace any damaged parts quickly.' },
+          { id: 2, body: `If you call us before 10 am, we'll be able to fix your appliance the same day. So, regardless of the work your Microwave needs, call us.` },
         ]
     }
   },
