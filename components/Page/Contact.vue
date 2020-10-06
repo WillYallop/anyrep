@@ -4,17 +4,28 @@
             <!-- Form Con -->
             <div class="formCon">
                 <label for="nameId">Name</label> 
-                <input id="nameId" type="text" class="inputStyle">
+                <input id="nameId" type="text" class="inputStyle" v-model="name" :class="{ 'validationError' : !verifyName, 'fieldError' : fieldError[0] }">
+                <label for="phoneId">Phone</label>
+                <input id="phoneId" type="text" class="inputStyle" v-model="phone" :class="{ 'validationError' : !verifyPhone, 'fieldError' : fieldError[1] }">
                 <label for="emailId">Email</label>
-                <input id="emailId" type="text" class="inputStyle">
+                <input id="emailId" type="text" class="inputStyle" v-model="email" :class="{ 'validationError' : !verifyEmail, 'fieldError' : fieldError[2] }">
                 <label for="messageId">Message</label>
-                <textarea id="messageId" class="textareaStyle"></textarea>
-                <button class="btnStyle1">Send</button>
+                <textarea id="messageId" class="textareaStyle" v-model="message" :class="{ 'validationError' : !verifyMessage, 'fieldError' : fieldError[3] }"></textarea>
+
+                <p class="mssageP" v-if="msg">{{msg}}</p>
+
+                <button class="btnStyle1" v-on:click="sendMessage">Send <img class="emailSendingImg" v-if="sending" src="../../assets/images/loadingGif.gif" alt="Email Sending"></button>
+                
             </div>
             <!-- Contact Info Con -->
             <div class="infoCon">
                 <h4 class="componentTitle">Let us hear your message today!</h4>
                 <div class="rowCon">
+                    <div class="row">
+                        <div class="icon"></div>
+                        <div class="line"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.</p>
+                    </div>
                     <div class="row">
                         <div class="icon"></div>
                         <div class="line"></div>
@@ -37,10 +48,153 @@
 </template>
 
 <script>
+// Libs
+import axios from 'axios'
+
 export default {
     data() {
         return {
+            // V-models
+            name: '',
+            phone: '',
+            email: '',
+            message: '',
 
+            // Data Verification
+            dataApproved: [ false, false, false, false ],
+            fieldError: [ false, false, false, false ],
+
+            // Regexs
+            stringRegex: /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/,
+            postCodeRegex: /([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})/,
+            numberRegex: /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/,
+            emailRegex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+
+            // Errors
+            msg: false, 
+
+            // Logic
+            sending: false
+        }
+    },
+    computed: {
+        verifyName() {
+            if(this.name.length > 0) {
+                if(this.stringRegex.test(this.name)) {
+                    this.dataApproved[0] = true
+                    this.fieldError[0] = false
+                    return true
+                } else {
+                    this.dataApproved[0] = false
+                    return false
+                }
+            } else {
+                this.dataApproved[0] = false
+                return false
+            }
+        }, 
+        verifyPhone() {
+            if(this.phone.length > 0) {
+                if(this.numberRegex.test(this.phone)) {
+                    this.dataApproved[1] = true
+                    this.fieldError[1] = false
+                    return true
+                } else {
+                    this.dataApproved[1] = false
+                    return false
+                }
+            } else {
+                this.dataApproved[1] = false
+                return false
+            }
+        }, 
+        verifyEmail() {
+            if(this.email.length > 0) {
+                if(this.emailRegex.test(this.email)) {
+                    this.dataApproved[2] = true
+                    this.fieldError[2] = false
+                    return true
+                } else {
+                    this.dataApproved[2] = false
+                    return false
+                }
+            } else {
+                this.dataApproved[2] = false
+                return false
+            }
+        },
+        verifyMessage() {
+            if(this.message.length > 0) {
+                if(this.stringRegex.test(this.message)) {
+                    this.dataApproved[3] = true
+                    this.fieldError[3] = false
+                    return true
+                } else {
+                    this.dataApproved[3] = false
+                    return false
+                }
+            } else {
+                this.dataApproved[3] = false
+                return false
+            }
+        }, 
+    },
+    methods: {
+        verifyData() {
+            let checker = arr => arr.every(Boolean);
+            if(checker(this.dataApproved)) {
+                return true
+            } else {
+                return false
+            }
+        },
+        sendMessage() {
+            if(this.verifyData()) {
+                this.sending = true
+                this.$nuxt.$loading.start()
+                // Approved
+                // Reset errors
+                this.fieldError = [ false, false, false, false ]
+                this.msg = false
+               
+                // Post results
+                axios.post('https://api.williamyallop.com/v1/anyrep/email/contact', {
+                    name: this.name,
+                    message: this.message,
+                    phone: this.phone,
+                    email: this.email
+                })
+                .then((response) => {
+                    if(response.data.message === 'success') {
+                        this.msg = 'Your email was successfully sent!' 
+                        this.sending = false
+                        this.$nuxt.$loading.finish()
+                    }
+                })
+                .catch((err) => {
+                    this.msg = 'There was an error sending the message! Please try again, or give us a call!'
+                    this.sending = false
+                    this.$nuxt.$loading.finish()
+                })
+            } else {
+                // Reset errors
+                this.fieldError = [ false, false, false, false ]
+                this.msg = false
+                // Not Approved
+                if(!this.dataApproved[0]) {
+                    this.fieldError[0] = true
+                }
+                if(!this.dataApproved[1]) {
+                    this.fieldError[1] = true
+                }
+                if(!this.dataApproved[2]) {
+                    this.fieldError[2] = true
+                }
+                if(!this.dataApproved[3]) {
+                    this.fieldError[3] = true
+                }
+                this.msg = 'Make sure to fill in all the fields, and enter valid charcters!'
+            }
         }
     }
 }
@@ -71,6 +225,9 @@ export default {
     border: none;
     margin-bottom: 10px;
     margin-top: 5px;
+    background-color: #FFF;
+    border: 2px solid #FFF;
+    font-size: 16px;
 } 
 .textareaStyle {
     height: 150px;
@@ -82,6 +239,30 @@ export default {
     margin-top: 5px;
     margin-bottom: 20px;
     padding: 10px;
+    background-color: #FFF;
+    border: 2px solid #FFF;
+    font-size: 16px;
+}
+.validationError:focus {
+    border: 2px solid var(--main-accent-color)
+}
+.fieldError {
+    border: 2px solid var(--main-accent-color)
+}
+.mssageP {
+    margin-bottom: 20px;
+    color: #FFF;
+}
+.btnStyle1 {
+    width: 100%;
+}
+.btnStyle1:hover {
+    transform: scale(1.05);
+}
+.emailSendingImg {
+    height: 16px;
+    margin-left: 5px;
+    margin-bottom: -2px;
 }
 
 /* Info */

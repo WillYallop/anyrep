@@ -191,7 +191,7 @@
 @media only screen and (max-width: 500px)  {
     .siteLinksCon .col {width: 100%; padding-right: 0;}
     .siteLinksCon .col:last-child {margin-top: 20px;}
-    .openingCol {width: 100%;}
+    .openingCol {width: 100%; min-width: auto;}
     .siteLinksCon .col h6 {font-size: 20px;}
 }
 </style>

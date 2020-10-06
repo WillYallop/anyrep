@@ -1,6 +1,9 @@
 <template>
   <div class="pageCon">
 
+    <!-- Page Header -->
+    <SiteHeader/>
+
     <!-- Banner -->
     <Banner
     :title="'Get a quote on'"
@@ -49,6 +52,7 @@
 
 <script>
 // Components
+import SiteHeader from '@/components/Global/SiteHeader'
 import SlantTop from '@/components/SlantsComponents/SlantTop'
 import SlantBottom from '@/components/SlantsComponents/SlantBottom'
 import Banner from '@/components/Page/Banner'
@@ -76,6 +80,7 @@ export default {
 
   },
   components: {
+    SiteHeader,
     SlantTop,
     SlantBottom,
     Banner,

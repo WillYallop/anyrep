@@ -1,22 +1,22 @@
 <template>
   <div class="mobileNav" :class="{ 'active' : navStatus }">
       <nav class="navCon">
-        <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/">Home <img src="../../assets/images/homeIcon.svg" alt=""></nuxt-link>
-        <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/book">Book <img class="clipboardIcon" src="../../assets/images/clipboardIcon.svg" alt=""></nuxt-link>
-        <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/store">Store <img src="../../assets/images/cartIcon.svg" alt=""></nuxt-link>
-        <nuxt-link @click.native="$emit('toggle-nav')" class="navLink" to="/contact">Contact <img src="../../assets/images/phoneIcon.svg" alt=""></nuxt-link>
+        <nuxt-link @click.native="$store.commit('toggleNavigation')" class="navLink" to="/">Home <img src="../../assets/images/homeIcon.svg" alt=""></nuxt-link>
+        <nuxt-link @click.native="$store.commit('toggleNavigation')" class="navLink" to="/book">Book <img class="clipboardIcon" src="../../assets/images/clipboardIcon.svg" alt=""></nuxt-link>
+        <nuxt-link @click.native="$store.commit('toggleNavigation')" class="navLink" to="/store">Store <img src="../../assets/images/cartIcon.svg" alt=""></nuxt-link>
+        <nuxt-link @click.native="$store.commit('toggleNavigation')" class="navLink" to="/contact">Contact <img src="../../assets/images/phoneIcon.svg" alt=""></nuxt-link>
         <div v-on:click="dropdown = !dropdown" class="navLink" to="/">Services <img src="../../assets/images/chevronDownIcon.svg" alt=""></div>
         <div class="servicesDropdown" v-show="dropdown">
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/washing-machine">Washing Machines Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/fridge-freezer">Fridge / Freezer Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/dishwasher">Dishwasher Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/tumbledryer">Tumbledryer Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/cooker">Cooker Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/hob">Hob Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/commercial-appliance">Commercial Appliance Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/extractor-hood">Extractor Hood Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/hoover">Hoover Repairs</nuxt-link>
-          <nuxt-link @click.native="$emit('toggle-nav')" to="/repair/microwave">Microwave Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/washing-machine">Washing Machines Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/fridge-freezer">Fridge / Freezer Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/dishwasher">Dishwasher Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/tumbledryer">Tumbledryer Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/cooker">Cooker Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/hob">Hob Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/commercial-appliance">Commercial Appliance Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/extractor-hood">Extractor Hood Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/hoover">Hoover Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/microwave">Microwave Repairs</nuxt-link>
         </div>
       </nav>
   </div>
@@ -32,9 +32,10 @@ export default {
   mounted() {
 
   },
-  props: {
-    navStatus: Boolean
-
+  computed: {
+    navStatus() {
+      return this.$store.state.navigation.navStatus
+    }
   },
   methods: {
 
@@ -59,7 +60,7 @@ export default {
 }
 
 .navCon {
-  padding: 40px 20px;
+  padding: 20px 20px;
   height: 100%;
   overflow-y: scroll;
   -ms-overflow-style: none;

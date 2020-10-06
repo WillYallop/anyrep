@@ -39,17 +39,17 @@
                             <!-- First Name -->
                             <label for="fName">First Name <span class="requiredInput">*</span></label>
                             <input class="inputStyle inputBotMarg" type="text" id="fName" v-model="fName" :class="{ 'validationError' : !verifyFName, 'fieldError' : fieldError[3] }">
-                            <!-- Post Code -->
-                            <label for="postCode">Post Code <span class="requiredInput">*</span></label>
-                            <input class="inputStyle inputBotMarg" type="text" id="postCode" v-model="postCode" :class="{ 'validationError' : !verifyPostCode, 'fieldError' : fieldError[4] }">
+                            <!-- Last Name -->
+                            <label for="lName">Last Name</label>
+                            <input class="inputStyle inputBotMarg" type="text" id="lName" v-model="lName" :class="{ 'validationError' : !verifyLName, 'fieldError' : fieldError[11] }">
                             <!-- Town -->
                             <label for="town">Town <span class="requiredInput">*</span></label>
                             <input class="inputStyle" type="text" id="town" v-model="town" :class="{ 'validationError' : !verifyTown, 'fieldError' : fieldError[6] }">
                         </div>
                         <div class="inputCol">
-                            <!-- Last Name -->
-                            <label for="lName">Last Name</label>
-                            <input class="inputStyle inputBotMarg" type="text" id="lName" v-model="lName" :class="{ 'validationError' : !verifyLName, 'fieldError' : fieldError[11] }">
+                            <!-- Post Code -->
+                            <label for="postCode">Post Code <span class="requiredInput">*</span></label>
+                            <input class="inputStyle inputBotMarg" type="text" id="postCode" v-model="postCode" :class="{ 'validationError' : !verifyPostCode, 'fieldError' : fieldError[4] }">
                             <!-- Address -->
                             <label for="address">Address <span class="requiredInput">*</span></label>
                             <input class="inputStyle inputBotMarg" type="text" id="address" v-model="address" :class="{ 'validationError' : !verifyAddress, 'fieldError' : fieldError[5] }">
@@ -93,14 +93,14 @@
                     </div>
                     <div class="infoContainer">
                         <p style="margin-bottom: 5px;"><b>Please Note!</b></p>
-                        <p class="finishBody">Payments are not made online and will be handled in person. For domestic repairs we charge a fixed rate plus the costs of parts if needed so regardless of the time required to fix your appliance, the price is the same.</p>
+                        <p class="finishBody">Payments are not made online and will be handled in person. For domestic repairs we charge a fixed rate plus the costs of parts if they are needed.</p>
                     </div>
 
                     <p v-if="errorMsg" class="termsError">{{errorMsg}}</p>
                     <p v-if="fieldEmptyArray.length > 0" class="fieldErrorP">Make sure all fields are filled in and contain valid characters!</p>
                     <p v-if="successMsg" class="bookSuccessP">{{successMsg}}</p>
                    
-                    <button class="btnStyle1" v-on:click="bookRepair">Book repair</button>
+                    <button class="btnStyle1" v-on:click="bookRepair">Book repair<img class="emailSendingImg" v-if="sending" src="../../../assets/images/loadingGif.gif" alt="Email Sending"></button>
                 </div>
             </div>
 
@@ -129,8 +129,10 @@ export default {
             // Error
             fieldEmptyArray: [],
             errorMsg: false,
-            successMsg: false
+            successMsg: false,
 
+            // Logic
+            sending: false
         }
     },
     computed: {
@@ -434,8 +436,10 @@ export default {
                 this.fieldEmptyArray = []
                 this.fieldError = [ false, false, false, false, false, false, false, false, false, false, false, false ]
                 if(this.termsAccepted) {
+                    this.sending = true
+                    this.$nuxt.$loading.start()
                     this.errorMsg = false
-                    console.log(this.$store.state.booking.book)
+
                     // Post results
                     axios.post('https://api.williamyallop.com/v1/anyrep/email/book', {
                         type: this.$store.state.booking.book.appliance.type,
@@ -455,10 +459,14 @@ export default {
                         if(response.data.message === 'success') {
                             this.successMsg = 'Thank you for booking your appliance repair with Anyrep. A member of staff will contact you shortly to arrange a time and date.'
                             this.$store.commit('resetBooking')
+                            this.$nuxt.$loading.finish()
+                            this.sending = false
                         }
                     })
                     .catch((err) => {
                         this.errorMsg = 'There was an error submitting your booking, please contact us for your appliance repair instead. Sorry for the inconvenience!'
+                        this.$nuxt.$loading.finish()
+                        this.sending = false
                     })
                 } else {
                     this.errorMsg = 'You must agree to the terms and conditions before proceeding!'
@@ -593,6 +601,7 @@ export default {
 .textareaStyle {
     width: 100%;
     height: calc(100% - 23px);
+    min-height: 150px;
     padding: 10px;
     background-color: #FDFDFD;
     border: 1px solid #ECECEC;
@@ -665,6 +674,12 @@ export default {
 }
 .bookSuccessP {
     margin-bottom: 20px;
+}
+
+.emailSendingImg {
+    height: 16px;
+    margin-left: 5px;
+    margin-bottom: -2px;
 }
 
 @media only screen and (max-width: 768px) {

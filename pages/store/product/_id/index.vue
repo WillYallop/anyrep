@@ -1,6 +1,5 @@
 <template>
     <div class="pageCon">
-
         <!-- Page Header -->
         <SiteHeader/>
 
@@ -11,26 +10,28 @@
         :subTitle="`If you are looking for a refurbished appliance that works like new, but doesn't break the bank. Then look no further!`"
         :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
         <SlantBottom/>
-        
-        <!-- Products -->
-        <Products/>
+
+        <!-- Info Bar -->
+        <ProductInfo/>
+
+        <!-- Product -->
+        <Product/>
 
         <!-- Footer -->
         <SlantTop/>
         <SiteFooter/>
-
     </div>
 </template>
 
 <script>
-// Componetns
+// Components
 import SiteHeader from '@/components/Global/SiteHeader'
+import Banner from '@/components/Page/Banner'
+import Product from '@/components/Page/Product/Product'
+import SiteFooter from '@/components/Global/SiteFooter'
 import SlantTop from '@/components/SlantsComponents/SlantTop'
 import SlantBottom from '@/components/SlantsComponents/SlantBottom'
-import StoreBanner from '@/components/Page/Store/StoreBanner'
-import SiteFooter from '@/components/Global/SiteFooter'
-import StoreIntro from '@/components/Page/Store/StoreIntro'
-import Products from '@/components/Page/Store/Products'
+import ProductInfo from '@/components/Page/Product/ProductInfo'
 
 export default {
     data() {
@@ -40,15 +41,12 @@ export default {
     },
     components: {
         SiteHeader,
+        Banner,
+        Product,
+        SiteFooter,
         SlantTop,
         SlantBottom,
-        StoreBanner,
-        StoreIntro,
-        SiteFooter,
-        Products
-
-    },
-    methods: {
+        ProductInfo
 
     }
 }
@@ -57,6 +55,5 @@ export default {
 <style scoped>
 .pageCon {
   overflow: hidden;
-  min-height: 100%;
 }
 </style>

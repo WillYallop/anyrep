@@ -13,6 +13,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  loading: { 
+    color: '#256EFF', 
+    height: '3px',
+    throttle: 0
+  },
   css: [
     'swiper/dist/css/swiper.css',
   ],

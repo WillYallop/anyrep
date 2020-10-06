@@ -1,16 +1,13 @@
 <template>
   <div>
 
-    <MobileNavigation :navStatus="navStatus"
-    @toggle-nav="toggleNav"/>
+    <MobileNavigation/>
     <div class="pageGroup" :class="{ 'navActive' : navStatus }">
       <TopBar/>
-      <SiteHeader
-      @toggle-nav="toggleNav"/>
-      <Nuxt />
+      <Nuxt/>
     </div>
-    <div v-if="$route.path != '/book' && $route.path != '/store'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
-    <button v-show="scrollPos > 200 || navStatus" v-on:click="navStatus = !navStatus" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
+    <div v-if="$route.path != '/book' && $route.path != '/store' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
+    <button v-show="scrollPos > 200 || navStatus" v-on:click="$store.commit('toggleNavigation')" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
   </div>
 </template>
 
@@ -23,20 +20,26 @@ import SiteHeader from '@/components/Global/SiteHeader'
 export default {
   data() {
     return {
-      navStatus: false,
       scrollPos: 0
+
     }
   },
   mounted() {
-  
+    
   },
   components: {
     TopBar,
     MobileNavigation,
     SiteHeader
   },
+  computed: {
+    navStatus() {
+      return this.$store.state.navigation.navStatus
+    }
+  },
   methods: {
     toggleNav() {
+      
       this.navStatus = !this.navStatus
     },
     headerScrolled() {

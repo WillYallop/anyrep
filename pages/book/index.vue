@@ -1,5 +1,9 @@
 <template>
     <div class="pageCon">
+
+        <!-- Page Header -->
+        <SiteHeader/>
+
         <!-- Banner -->
         <BookBanner
         :title="'Book your Appliance'"
@@ -23,6 +27,7 @@
 
 <script>
 // Componetns
+import SiteHeader from '@/components/Global/SiteHeader'
 import SlantTop from '@/components/SlantsComponents/SlantTop'
 import SlantBottom from '@/components/SlantsComponents/SlantBottom'
 import BookBanner from '@/components/Page/Book/BookBanner'
@@ -37,6 +42,7 @@ export default {
         }
     },
     components: {
+        SiteHeader,
         SlantTop,
         SlantBottom,
         BookBanner,

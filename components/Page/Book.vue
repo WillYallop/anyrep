@@ -1,14 +1,14 @@
 <template>
     <div class="formContainer">
         <div class="formInner">
-            <label for="appType" class="hideLabel">Appliance Type</label>
-            <input id="appType" class="selectStyle" placeholder="Appliance Type" v-model="type">
-            <label for="appMake" class="hideLabel">Appliance Make</label>
-            <input id="appMake" class="selectStyle" placeholder="Appliance Make" v-model="make">
-            <label for="appModel" class="hideLabel">Appliance Model</label>
-            <input id="appModel" class="selectStyle" placeholder="Appliance Model" v-model="model">
-            <label for="appBody" class="hideLabel">What's the issue</label>
-            <textarea id="appBody" class="textareaStyle" placeholder="What's the issue" v-model="issue"></textarea>
+            <label for="appType2" class="hideLabel">Appliance Type</label>
+            <input id="appType2" class="selectStyle" placeholder="Appliance Type" v-model="type">
+            <label for="appMake2" class="hideLabel">Appliance Make</label>
+            <input id="appMake2" class="selectStyle" placeholder="Appliance Make" v-model="make">
+            <label for="appModel2" class="hideLabel">Appliance Model</label>
+            <input id="appModel2" class="selectStyle" placeholder="Appliance Model" v-model="model">
+            <label for="appBody2" class="hideLabel">What's the issue</label>
+            <textarea id="appBody2" class="textareaStyle" placeholder="What's the issue" v-model="issue"></textarea>
             <button class="btnStyle1" v-on:click="bookRepair">Book Repair</button>
         </div>
 

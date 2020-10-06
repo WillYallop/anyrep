@@ -1,4 +1,5 @@
-import booking from './modules/booking.js'
+import navigation from './modules/navigation'
+import booking from './modules/booking'
 
 const state = () => ({
   
@@ -13,7 +14,8 @@ const actions = {
 };
 
 const modules = {
-    booking
+  navigation,
+  booking
 };
 
 export default {

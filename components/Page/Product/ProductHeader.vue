@@ -1,8 +1,8 @@
 <template>
   <header class="headerCon">
       <div class="headerWrap globWrap">
-            <nuxt-link to="/" class="siteLogo"><img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo"></nuxt-link>
-            <button class="navigationBtn" v-on:click="$store.commit('toggleNavigation')"><img src="../../assets/images/hamburger.svg" alt=""></button>
+            <nuxt-link to="/" class="siteLogo"><img class="siteLogo" src="../../../assets/images/logo.svg" alt="Anyrep Logo"></nuxt-link>
+            <button class="navigationBtn" v-on:click="$store.commit('toggleNavigation')"><img src="../../../assets/images/hamburger.svg" alt=""></button>
             <ul class="headerUl">
                 <li><nuxt-link to="/">Home</nuxt-link></li>
                 <li><nuxt-link to="/book">Book</nuxt-link></li>
@@ -47,7 +47,7 @@ export default {
 <style scoped>
 .headerCon {
     width: 100%;
-    padding: 30px 0;
+    padding: 10px 0;
     background-color: var(--main-bg-color);
     display: flex;
     justify-content: center;
@@ -56,10 +56,10 @@ export default {
 .headerWrap {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 .siteLogo {
-    height: 60px;
+    height: 30px;
     transition: 0.3s;
 }
 .headerUl {
@@ -126,7 +126,7 @@ export default {
 @media only screen and (max-width: 768px) {
     /* Desktop */
     .headerUl {display: none;}
-    .headerCon {padding: 30px 0; }
+    .headerCon {padding: 10px 0; }
     /* Mobile */
     .navigationBtn {display: flex;}
 }

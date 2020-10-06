@@ -2,10 +2,9 @@
     <div class="compCon">
         <div class="compWrap globWrap">
             <div class="introCon">
-                <h2 class="intoTitle">Book your appliance repair now!</h2>
-                <h3 class="intoHighlight">Norwich appliance repairs with Anyrep</h3>
-                <p class="introBody">If your appliance isn't working and you are looking for a quick and cost effective repair in the Norwich, Norfolk region, then don't worry. Book an appliance repair online in less than a minute, and we will get you booked in ASAP.</p>
-                <p class="infoText">If your request was made out of hours, we will get back to you at our earliest opportunity.</p>
+                <h2 class="intoTitle">Browse our new and refurbished appliances.</h2>
+                <h3 class="intoHighlight">Norfolk deliveries and installations only!</h3>
+                <p class="introBody">If you're on a budget or just not looking for a brand new appliance, then we might have something you for you. If we don't currently have anything then check again later as we are constantly adding new appliances to our site.</p>
             </div>
         </div>
     </div>
