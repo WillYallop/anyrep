@@ -9,16 +9,16 @@
                 <li @mouseover="dropdown = true" v-on:click="dropdown = !dropdown">
                     Services
                     <div class="dropdownContainer" v-show="dropdown" @mouseleave="dropdown = false">
-                        <nuxt-link to="/repair/washing-machine">Washing Machines Repairs</nuxt-link>
-                        <nuxt-link to="/repair/fridge-freezer">Fridge / Freezer Repairs</nuxt-link>
-                        <nuxt-link to="/repair/dishwasher">Dishwasher Repairs</nuxt-link>
-                        <nuxt-link to="/repair/tumbledryer">Tumbledryer Repairs</nuxt-link>
-                        <nuxt-link to="/repair/cooker">Cooker Repairs</nuxt-link>
-                        <nuxt-link to="/repair/hob">Hob Repairs</nuxt-link>
-                        <nuxt-link to="/repair/commercial-appliance">Commercial Appliance Repairs</nuxt-link>
-                        <nuxt-link to="/repair/extractor-hood">Extractor Hood Repairs</nuxt-link>
-                        <nuxt-link to="/repair/hoover">Hoover Repairs</nuxt-link>
-                        <nuxt-link to="/repair/microwave">Microwave Repairs</nuxt-link>
+                        <nuxt-link to="/washing-machine-repairs">Washing Machines Repairs</nuxt-link>
+                        <nuxt-link to="/fridge-and-freezer-repairs">Fridge / Freezer Repairs</nuxt-link>
+                        <nuxt-link to="/dishwasher-repairs">Dishwasher Repairs</nuxt-link>
+                        <nuxt-link to="/tumbledryer-repairs">Tumbledryer Repairs</nuxt-link>
+                        <nuxt-link to="/cooker-repairs">Cooker Repairs</nuxt-link>
+                        <nuxt-link to="/hob-repairs">Hob Repairs</nuxt-link>
+                        <nuxt-link to="/commercial-appliance-repairs">Commercial Appliance Repairs</nuxt-link>
+                        <nuxt-link to="/extractor-hood-repairs">Extractor Hood Repairs</nuxt-link>
+                        <nuxt-link to="/hoover-repairs">Hoover Repairs</nuxt-link>
+                        <nuxt-link to="/microwave-repairs">Microwave Repairs</nuxt-link>
                     </div>
                 </li>
                 <li><nuxt-link to="/store">Store</nuxt-link></li>

@@ -45,7 +45,7 @@ export default {
 
   },
   sitemap: {
-    hostname: 'https://anyrep.com',
+    hostname: 'https://anyrep.co.uk',
     gzip: true,
 
   },

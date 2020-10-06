@@ -7,16 +7,16 @@
         <nuxt-link @click.native="$store.commit('toggleNavigation')" class="navLink" to="/contact">Contact <img src="../../assets/images/phoneIcon.svg" alt=""></nuxt-link>
         <div v-on:click="dropdown = !dropdown" class="navLink" to="/">Services <img src="../../assets/images/chevronDownIcon.svg" alt=""></div>
         <div class="servicesDropdown" v-show="dropdown">
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/washing-machine">Washing Machines Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/fridge-freezer">Fridge / Freezer Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/dishwasher">Dishwasher Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/tumble-dryer">Tumble Dryer Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/cooker">Cooker Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/hob">Hob Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/commercial-appliance">Commercial Appliance Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/extractor-hood">Extractor Hood Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/hoover">Hoover Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/microwave">Microwave Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/washing-machine-repairs">Washing Machines Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/fridge-and-freezer-repairs">Fridge / Freezer Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/dishwasher-repairs">Dishwasher Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/tumble-dryer-repairs">Tumble Dryer Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/cooker-repairs">Cooker Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/hob-repairs">Hob Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/commercial-appliance-repairs">Commercial Appliance Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/extractor-hood-repairs">Extractor Hood Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/hoover-repairs">Hoover Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/microwave-repairs">Microwave Repairs</nuxt-link>
         </div>
       </nav>
   </div>

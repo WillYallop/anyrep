@@ -10,9 +10,11 @@
     <button v-show="scrollPos > 200 || navStatus" v-on:click="$store.commit('toggleNavigation')" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
   
     <div v-if="popUp & scrollPos < 200" class="sitePopup">
-      <h4>Keeping Ahead of COVID-19</h4>
-      <p>Rest assured Anyrep is taking all necessary precuations to counter the spread of COVID-19!</p>
-      <button v-on:click="$store.commit('hideCovidPopUp')" class="closeBtn">close</button>
+      <div class="globWrap">
+        <h4>Keeping Ahead of COVID-19</h4>
+        <p>Rest assured Anyrep is taking all necessary precuations to counter the spread of COVID-19!</p>
+        <button v-on:click="$store.commit('hideCovidPopUp')" class="closeBtn">close</button>
+      </div>
     </div>
 
   </div>
@@ -255,9 +257,13 @@ button:focus {outline: none; border: none;}
   background-color: #EB0F0F;
   height: auto;
   z-index: 1010;
-  padding: 10px 20px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
 }
-
+.sitePopup .globWrap {
+  position: relative;
+}
 .sitePopup h4 {
   font-size: 20px;
   color: #FFF;
@@ -273,7 +279,7 @@ button:focus {outline: none; border: none;}
 .closeBtn {
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 40px;
   background: transparent;
   border: none;
   font-size: 14px;
@@ -286,6 +292,7 @@ button:focus {outline: none; border: none;}
   .globWrap {padding: 0 20px;}
   .evenPad {padding-top: 60px;padding-bottom: 60px;}
   .oddPad {padding-top: 60px;padding-bottom: 60px;}
+  .closeBtn {right: 20px;}
 }
 @media only screen and (min-width: 768.1px) {
   .toggleNavBtn {display: none;}
