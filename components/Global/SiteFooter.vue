@@ -21,17 +21,17 @@
                 <!-- Sitemap -->
                 <div class="siteLinksCon">
                     <div class="col">
-                        <h6 class="componentTitle">Links</h6>
+                        <p class="componentTitle">Links</p>
                         <nuxt-link to="/">Home</nuxt-link>
                         <nuxt-link to="/book">Book</nuxt-link>
                         <nuxt-link to="/store">Store</nuxt-link>
                         <nuxt-link to="/contact">Contact</nuxt-link>
-                        <a href="https://www.facebook.com/anyrep/" target="_blank">Facebook</a>
-                        <a href="https://www.yell.com/biz/anyrep-domestic-and-commercial-appliance-repairs-norwich-7112578/" target="_blank">Yell</a>
-                        <nuxt-link to="/sitemap.xml">Sitemap</nuxt-link>
+                        <a href="https://www.facebook.com/anyrep/" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://www.yell.com/biz/anyrep-domestic-and-commercial-appliance-repairs-norwich-7112578/" target="_blank" rel="noopener">Yell</a>
+                        <a href="https://anyrep.co.uk/sitemap.xml">Sitemap</a>
                     </div>
                     <div class="col">
-                        <h6 class="componentTitle">Appliance Repair Services</h6>
+                        <p class="componentTitle">Appliance Repair Services</p>
                         <nuxt-link to="/repair/washing-machine">Washing Machines Repairs</nuxt-link>
                         <nuxt-link to="/repair/fridge-freezer">Fridge / Freezer Repairs</nuxt-link>
                         <nuxt-link to="/repair/dishwasher">Dishwasher Repairs</nuxt-link>
@@ -46,12 +46,12 @@
                 </div>
             </div>
             <div class="iframeRow">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.1401691055107!2d1.3593686158119225!3d52.639380579836974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e317d71bfd13%3A0xe64136f010e51a48!2sAnyrep!5e0!3m2!1sen!2suk!4v1555624037897!5m2!1sen!2suk" frameborder="0"></iframe>
+                <iframe title="Anyrep Google Maps Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.1401691055107!2d1.3593686158119225!3d52.639380579836974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e317d71bfd13%3A0xe64136f010e51a48!2sAnyrep!5e0!3m2!1sen!2suk!4v1555624037897!5m2!1sen!2suk" frameborder="0"></iframe>
             </div>
         </div>
         <div class="copyrightBar">
             <p>Anyrep Domestic & Commercial Appliance Repairs   2020. All Rights Reserved.</p>
-            <p>Made by <a href="https://williamyallop.com">William Yallop</a></p>
+            <p>Made by <a href="https://williamyallop.com" target="_blank" rel="noopener">William Yallop</a></p>
         </div>
     </footer>
 </template>

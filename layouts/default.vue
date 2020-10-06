@@ -6,8 +6,15 @@
       <TopBar/>
       <Nuxt/>
     </div>
-    <div v-if="$route.path != '/book' && $route.path != '/store' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
+    <!-- <div v-if="$route.path != '/book' && $route.path != '/store' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div> -->
     <button v-show="scrollPos > 200 || navStatus" v-on:click="$store.commit('toggleNavigation')" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
+  
+    <div v-if="popUp & scrollPos < 200" class="sitePopup">
+      <h4>Keeping Ahead of COVID-19</h4>
+      <p>Rest assured Anyrep is taking all necessary precuations to counter the spread of COVID-19!</p>
+      <button v-on:click="$store.commit('hideCovidPopUp')" class="closeBtn">close</button>
+    </div>
+
   </div>
 </template>
 
@@ -35,6 +42,9 @@ export default {
   computed: {
     navStatus() {
       return this.$store.state.navigation.navStatus
+    },
+    popUp() {
+      return this.$store.state.navigation.covidPopup
     }
   },
   methods: {
@@ -60,8 +70,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -69,6 +81,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 body {
   width: 100%;
@@ -76,9 +90,9 @@ body {
   overflow-x: hidden;
   background-color: #F3F7FF;
 }
-textarea {font-family: 'Source Sans Pro', sans-serif;}
+textarea {font-family: 'Lato', sans-serif;}
 textarea:focus {outline: none; border: none;}
-input {font-family: 'Source Sans Pro', sans-serif;}
+input {font-family: 'Lato', sans-serif;}
 input:focus {outline: none; border: none;}
 button:focus {outline: none; border: none;}
 *,
@@ -101,7 +115,7 @@ button:focus {outline: none; border: none;}
 }
 .navActive {
   right: calc(100% - 80px);
-}
+} 
 
 /* Global Styles */
 .globWrap {
@@ -179,6 +193,9 @@ button:focus {outline: none; border: none;}
   --main-accent-color: #EB0F0F;
   --secondary-bg-color: #0075C3;
 
+  --even-bg-box-color: #FFF;
+  --even-bg-highlight-text: #0075C3;
+  
   --title-text: #FFF;
   --highlight-text: #028DE9;
   --body-text: #F3F3F3;
@@ -220,12 +237,49 @@ button:focus {outline: none; border: none;}
   bottom: 20px;
   right: 20px;
   border: none;
-  background-color: var(--main-accent-color);
-  z-index: 1000;
+  background-color: var(--secondary-bg-color);
+  z-index: 1020;
   cursor: pointer;
 }
 .toggleNavBtn img {
   height: 15px;
+}
+
+/* Site Popup */
+.sitePopup {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EB0F0F;
+  height: auto;
+  z-index: 1010;
+  padding: 10px 20px;
+}
+
+.sitePopup h4 {
+  font-size: 20px;
+  color: #FFF;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.sitePopup p {
+  font-size: 16px;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 0;
+}
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #FFF;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {

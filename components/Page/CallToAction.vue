@@ -4,19 +4,19 @@
             <div class="cTACon">
                 <a class="col" href="tel:01603433083">
                     <div class="iconCon">
-                        <img src="../../assets/images/phoneIcon.svg" alt="Call us on 01603 433083">
+                        <img src="../../assets/images/phoneIcon2.svg" alt="Call us on 01603 433083">
                     </div>  
                     <h4 class="componentTitle">Call us on<br>01603 433083</h4>
                 </a>
                 <a class="col" href="tel:07525150999">
                     <div class="iconCon">
-                        <img src="../../assets/images/phoneIcon.svg" alt="Call us on 07525 150 999">
+                        <img src="../../assets/images/phoneIcon2.svg" alt="Call us on 07525 150 999">
                     </div>
                     <h4 class="componentTitle">Call us on<br>07525 150999</h4>
                 </a>
                 <a class="col" href="mailto:anyrep@gmail.com">
                     <div class="iconCon">
-                        <img src="../../assets/images/emailIcon.svg" alt="Email us at anyrep@gmail.com">
+                        <img src="../../assets/images/emailIcon2.svg" alt="Email us at anyrep@gmail.com">
                     </div>
                     <h4 class="componentTitle">Email us at anyrep@gmail.com</h4>
                 </a>
@@ -31,10 +31,14 @@
     display: flex;
     justify-content: space-between;
 }
+.componentTitle {
+    color: #0A0A0A;
+}
 .cTACon .col {
     width: 28%;
     padding: 30px;
-    background-color: var(--main-bg-box-color);
+    background-color: var(--even-bg-box-color);
+    border: 1px solid #F6F6F6;
     border-radius: 20px;
     text-align: center;
     display: flex;
@@ -51,7 +55,7 @@
     min-height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 4px solid #FFF;
+    border: 4px solid var(--secondary-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;

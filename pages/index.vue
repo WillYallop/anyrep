@@ -15,7 +15,7 @@
     <!-- Intro -->
     <PageIntro
     :title="'Why choose Anyrep Appliance Repairs?'"
-    :subTitle="'The only solution your appliance repair needs.'"
+    :subTitle="'The only solution your to appliance repair needs.'"
     :body="'Here at Anyrep Appliance Repairs we offer our reliable services on the same day where possible! So if you need your appliance repaired and you reside in the Norwich, Norfolk area then look no further. We have over 25 years of experience in the trade and our services are carried out by factory trained professionals. What’s more, all our work is guaranteed!'"/>
 
     <!-- Our Services Part 1 -->

@@ -2,7 +2,7 @@
   <header class="headerCon">
       <div class="headerWrap globWrap">
             <nuxt-link to="/" class="siteLogo"><img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo" data-not-lazy></nuxt-link>
-            <button class="navigationBtn" v-on:click="$store.commit('toggleNavigation')"><img src="../../assets/images/hamburger.svg" alt=""></button>
+            <button class="navigationBtn" v-on:click="$store.commit('toggleNavigation')" aria-label="Toggle Navigation"><img src="../../assets/images/hamburger.svg" alt="Toggle Navigation Button"></button>
             <ul class="headerUl">
                 <li><nuxt-link to="/">Home</nuxt-link></li>
                 <li><nuxt-link to="/book">Book</nuxt-link></li>

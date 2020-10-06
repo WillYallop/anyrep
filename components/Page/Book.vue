@@ -76,7 +76,11 @@ export default {
     font-size: 14px;
 }
 .hideLabel {
-    display: none;
+  position: absolute;
+  z-index: 0;
+  left: 20px;
+  top: 0;
+  user-select: none;
 }
 .tabletBtnsCon {
     position: absolute;

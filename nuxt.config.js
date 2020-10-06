@@ -35,9 +35,9 @@ export default {
   modules: [
     'nuxt-lazy-load',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/pwa'
 
   ],
   robots: {
@@ -50,7 +50,9 @@ export default {
 
   },
   pwa: { 
-    workbox: {}, 
+    icon: {
+      fileName: 'icon.png'
+    },
     meta: { 
       name: 'Anyrep',
       theme_color: '#090815', 
@@ -59,7 +61,6 @@ export default {
       nativeUI: true,
       description: "Book appliance repairs online with Anyrep!",
     }, 
-    icon: {},
     manifest: { 
       name: 'Anyrep', 
       short_name: 'Anyrep', 

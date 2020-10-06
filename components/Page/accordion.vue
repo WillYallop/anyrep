@@ -52,20 +52,25 @@ export default {
 }
 /* Header */
 .accHeader {
-    background-color: var(--main-bg-box-color);
+    background-color: var(--even-bg-box-color);
+    border: 1px solid #F6F6F6;
     padding: 30px;
     border-radius: 20px;
     z-index: 1;
     position: relative;
 }
+.componentTitle {
+    color: #0A0A0A;
+}
 .subHeadingHighlight {
-    color: var(--highlight-text);
+    color: var(--even-bg-highlight-text);
     font-size: 14px;
     margin: 10px 0 0;
 }
 /* Accordion */
 .accCon {
-    background-color: var(--main-bg-color);
+    background-color: var(--even-bg-box-color);
+    border: 1px solid #F6F6F6;
     padding: 30px;
     border-radius: 20px;
     margin-top: 20px;
@@ -73,7 +78,7 @@ export default {
     position: relative;
 }
 .accCon .row {
-    background-color: var(--main-bg-box-color);
+    background-color: #F6F6F6;
     margin-bottom: 10px;
     border-radius: 10px;
 }
@@ -81,9 +86,7 @@ export default {
     padding: 15px;
     cursor: pointer;
 }
-.rowHead h4 {
-    color: var(--title-text);
-}
+
 .rowBody {
     padding: 10px 15px 15px;
     display: none;
@@ -91,9 +94,7 @@ export default {
 .rowBody.active {
     display: block;
 }
-.rowBody p {
-    color: var(--body-text);
-}
+
 
 /* Image Col */
 .imageCol {

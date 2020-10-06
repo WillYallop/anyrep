@@ -28,7 +28,7 @@
     max-width: 250px;
 }
 .intoHighlight {
-    color: var(--highlight-text);
+    color: var(--even-bg-highlight-text);
     font-size: 14px;
     margin: 10px 0 20px;
 }

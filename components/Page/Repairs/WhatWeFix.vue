@@ -9,8 +9,8 @@
                     <img class="textareaImg" :src="getImage(image)" alt="">
                 </div>
                 <div class="textarea">
-                    <h4 class="componentTitle">{{title}}</h4>
-                    <h5 class="subHeadingHighlight">{{subTitle}}</h5>
+                    <h3 class="componentTitle">{{title}}</h3>
+                    <h4 class="subHeadingHighlight">{{subTitle}}</h4>
                     <p class="componentBody">{{body}}</p>
                     <nuxt-link class="aStyle1" to="/book">Book Now</nuxt-link >
                 </div>

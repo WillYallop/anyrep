@@ -2,7 +2,7 @@
   <div class="topBarCon">
       <div class="topbarWrap globWrap">
           <div class="leftCol">
-            <a class="linkSt" href="https://www.facebook.com/anyrep/" target="_blank">Facebook</a>
+            <a class="linkSt" href="https://www.facebook.com/anyrep/" target="_blank" rel="noopener">Facebook</a>
             <nuxt-link class="linkSt" to="/book">Book Now</nuxt-link>
           </div>
           <div class="rightCol"> 

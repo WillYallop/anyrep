@@ -155,7 +155,11 @@ export default {
     font-size: 14px;
 }
 .hideLabel {
-    display: none;
+  position: absolute;
+  z-index: 0;
+  left: 20px;
+  top: 0;
+  user-select: none;
 }
 .tabletBtnsCon {
     position: absolute;
@@ -192,6 +196,8 @@ export default {
     border-radius: 5px;
     border: 1px solid #ECECEC;
     background-color: #FAFAFA;
+    z-index: 10;
+    position: relative;
 }
 .selectStyle::placeholder {
     color: #1C1C1C;
@@ -205,6 +211,8 @@ export default {
     border: 1px solid #ECECEC;
     font-size: 14px;
     background-color: #FAFAFA;
+    z-index: 10;
+    position: relative;
 }
 .textareaStyle::placeholder {
     color: #1C1C1C;
