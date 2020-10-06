@@ -7,7 +7,7 @@
                     <h1 class="siteHeading">{{title}}<span v-if="title2"><br>{{title2}}</span> </h1>
                     <p class="siteSubheading">{{subTitle}}</p>
                     <div class="btnCon">
-                        <button class="btnStyle1" :key="button.id" v-for="button in buttons">{{button.text}}</button>
+                        <button class="btnStyle1" v-on:click="$router.push(button.href)" :key="button.id" v-for="button in buttons">{{button.text}}</button>
                     </div>
                 </div>
                 <div class="formCol">

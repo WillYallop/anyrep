@@ -9,7 +9,7 @@
         :title="'We sell refurbished and new appliances!'"
         :title2="''"
         :subTitle="`If you are looking for a refurbished appliance that works like new, but doesn't break the bank. Then look no further!`"
-        :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
+        :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/book', text: 'Book Now'}]"/>
         <SlantBottom/>
         
         <!-- Products -->
@@ -37,6 +37,16 @@ export default {
         return {
 
         }
+    },
+    head: {
+        title: 'New & Refurbished Appliances | Anyrep | Norwich',
+        meta: [
+            {
+                hid: 'description',
+                name: 'description',
+                content: 'If you are looking for a new or refurbished appliance look no further. We have a range of price competetive appliances.'
+            }
+        ],
     },
     components: {
         SiteHeader,

@@ -67,6 +67,18 @@ export default {
 
         }
     },
+    head() {
+        return {
+            title: 'Purchase ' + this.product.title + ' | Anyrep | Norwich',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.product.description
+                }
+            ]
+        }
+    },
     components: {
         Skeleton,
         OrderModal
@@ -82,6 +94,9 @@ export default {
             .then((response) => {
                 this.product = response.data
                 this.pageLoading = false
+                if(this.product.length === 0) {
+                    this.$router.push('/store')
+                }
             })
             .catch((err) => {
                 console.log(err)

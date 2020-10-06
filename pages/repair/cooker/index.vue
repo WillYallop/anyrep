@@ -98,6 +98,16 @@ export default {
         ]
     }
   },
+  head: {
+    title: 'Cooker Repairs | Anyrep | Norwich',
+    meta: [
+      {
+        hid: 'description',
+          name: 'description',
+        content: 'Book your cooker repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
+      }
+    ],
+  },
   mounted() {
 
   },

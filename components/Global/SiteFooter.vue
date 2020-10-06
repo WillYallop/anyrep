@@ -140,7 +140,7 @@
     margin-bottom: 5px;
 }
 .siteLinksCon .col a {
-  padding: 5px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--main-bg-box-color);
   color: #BCBCBC;
   text-decoration: none;

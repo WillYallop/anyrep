@@ -97,6 +97,16 @@ export default {
         ]
     }
   },
+  head: {
+    title: 'Commercial Appliance Repairs | Anyrep | Norwich',
+    meta: [
+      {
+        hid: 'description',
+          name: 'description',
+        content: 'Book your commercial appliance repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
+      }
+    ],
+  },
   mounted() {
 
   },
