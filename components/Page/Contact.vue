@@ -24,22 +24,22 @@
                     <div class="row">
                         <div class="icon"></div>
                         <div class="line"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.</p>
+                        <p>Based in the Norwich, Norfolk region and have a question? Don’t hesitate to contact!</p>
                     </div>
                     <div class="row">
                         <div class="icon"></div>
                         <div class="line"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.</p>
+                        <p>As soon as we receive your message well contact you at the earliest possible time!</p>
                     </div>
                     <div class="row">
                         <div class="icon"></div>
                         <div class="line"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.</p>
+                        <p>If you are looking for an appliance repair, we will arrange a date and time that suits you.</p>
                     </div>
                     <div class="row">
                         <div class="icon"></div>
                         <div class="line"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur adipiscing elit.</p>
+                        <p>If not, we’re happy to answer and question and queries you may have!</p>
                     </div>
                 </div>
             </div>

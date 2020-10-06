@@ -10,7 +10,7 @@
           <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/washing-machine">Washing Machines Repairs</nuxt-link>
           <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/fridge-freezer">Fridge / Freezer Repairs</nuxt-link>
           <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/dishwasher">Dishwasher Repairs</nuxt-link>
-          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/tumbledryer">Tumbledryer Repairs</nuxt-link>
+          <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/tumble-dryer">Tumble Dryer Repairs</nuxt-link>
           <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/cooker">Cooker Repairs</nuxt-link>
           <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/hob">Hob Repairs</nuxt-link>
           <nuxt-link @click.native="$store.commit('toggleNavigation')" to="/repair/commercial-appliance">Commercial Appliance Repairs</nuxt-link>

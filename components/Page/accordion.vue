@@ -5,7 +5,7 @@
                 <!-- Header -->
                 <div class="accHeader">
                     <h4 class="componentTitle">Frequently asked questions</h4>
-                    <h5 class="subHeadingHighlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                    <h5 class="subHeadingHighlight">Some answers to commonly asked questions!</h5>
                 </div>
                 <!-- Accordion -->
                 <div class="accCon">

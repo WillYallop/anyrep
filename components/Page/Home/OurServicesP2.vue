@@ -12,7 +12,10 @@
                     <h4>{{service.title}}</h4>
                     <h5 class="subHeadingHighlight">{{service.highlightText}}</h5>
                     <p class="rowBodyP">{{service.body}}</p>
-                    <nuxt-link class="aStyle1" :to="service.btnHref">{{service.btnText}}</nuxt-link> 
+                    <div class="linkContainer">
+                        <nuxt-link class="aStyle1" :to="service.btnHref">{{service.btnText}}</nuxt-link>
+                        <nuxt-link class="aStyle1 aStyle2" to="/book" >Book Now</nuxt-link>
+                    </div>
                 </div>
             </div>
 
@@ -25,10 +28,9 @@ export default {
     data() {
         return {
             services: [
-                { id: 5, image: 'tumbledyrer.jpg', title: 'Tumbledryers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/tumbledryer', btnText: 'Find out more' },
-                { id: 6, image: 'cooker.jpg', title: 'Cookers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/cooker', btnText: 'Find out more' },
-                { id: 7, image: 'extractorHood.jpg', title: 'Extractor Hoods', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/extractor-hood', btnText: 'Find out more' },
-                { id: 8, image: 'commercialAppliances.jpg', title: 'Commercial Appliances', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/commercial-appliance', btnText: 'Find out more' }
+                { id: 4, image: 'tumbledyrer.jpg', title: 'Tumble Dryer Repairs', highlightText: 'Top rated Tumble Dryer repairs in Norwich', body: 'Having problems with your tumble dryer? Anyrep Appliance Repairs use quality diagnostic equipment and methods to determine the fault and provide a prompt and professional tumble dryer repair service, ensuring a long terms solution.', btnHref: '/repair/tumble-dryer', btnText: 'Find out more' },
+                { id: 5, image: 'cooker.jpg', title: 'Cooker Repairs', highlightText: 'Top rated Cooker repairs in Norwich', body: 'When your cooker breaks down, the impact is drastic and so we ensure Anyrep will do all it can to get your cooker up and running like new. Most repairs are completed on the first visit and on the same day where possible.', btnHref: '/repair/cooker', btnText: 'Find out more' },
+                { id: 6, image: 'commercialAppliances.jpg', title: 'Commercial Appliance Repairs', highlightText: 'Top rated Commercial Appliance repairs in Norwich', body: 'A sudden breakdown of a commercial appliance can bring a lot of inconvenience and lost profit to your business. That’s why you need experienced professionals who can work quickly and effectively. At Anyrep Appliance Repairs we have the experience and capacity to handle any simple or complex repairs quickly and successfully.', btnHref: '/repair/commercial-appliance', btnText: 'Find out more' }
             ]
         }
     },
@@ -106,10 +108,15 @@ export default {
     font-size: 14px;
     margin: 10px 0 20px;
 }
+.linkContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
 .rowBodyP {
     color: var(--body-text);;
     font-size: 16px;
 }
+.aStyle2 {margin-left: 10px;}
 
 
 /* hover */
@@ -140,7 +147,8 @@ export default {
     .rowImageContainer {margin: 0 0 -60px; width: 80%; height: auto; }
     .servicesRow {padding: 90px 30px 30px;}
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     .aStyle1 {width: 100%;}
+    .aStyle2 {margin-top: 10px; margin-left: 0;}
 }
 </style>

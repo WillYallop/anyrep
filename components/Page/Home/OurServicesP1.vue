@@ -12,7 +12,11 @@
                     <h4>{{service.title}}</h4>
                     <h5 class="subHeadingHighlight">{{service.highlightText}}</h5>
                     <p class="rowBodyP">{{service.body}}</p>
-                    <nuxt-link class="aStyle1" :to="service.btnHref">{{service.btnText}}</nuxt-link>
+                    <div class="linkContainer">
+                        <nuxt-link class="aStyle1" :to="service.btnHref">{{service.btnText}}</nuxt-link>
+                        <nuxt-link class="aStyle1 aStyle2" to="/book" >Book Now</nuxt-link>
+                    </div>
+               
                 </div>
             </div>
 
@@ -25,10 +29,9 @@ export default {
     data() {
         return {
             services: [
-                { id: 1, image: 'washingMachine.jpg', title: 'Washing Machines', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/washing-machine', btnText: 'Find out more' },
-                { id: 2, image: 'friedgeAndFreezer.jpg', title: 'Fridges & Freezers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/fridge-freezer', btnText: 'Find out more' },
-                { id: 3, image: 'hob.jpg', title: 'Hobs', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/hob', btnText: 'Find out more' },
-                { id: 4, image: 'dishwasher.jpg', title: 'Dishwashers', highlightText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada nibh feugiat metus bibendum, sed faucibus arcu tempus. Donec dictum, nisi at molestie interdum, ex nunc dictum dui, quis gravida orci nibh in sapien. Suspendisse potenti. Cras ac vestibulum est, vitae mattis turpis. Ut a justo mi. Curabitur molestie lobortis vulputate.', btnHref: '/repair/dishwasher', btnText: 'Find out more' }
+                { id: 1, image: 'washingMachine.jpg', title: 'Washing Machine Repairs', highlightText: 'Top rated Washing Machine repairs in Norwich.', body: 'Don’t let your broken washing machine leave you without clean clothes. When your washing machine won’t drain or spin, trust Anyrep Appliance Repairs to get your washing machine up and running at the earliest possible opportunity.', btnHref: '/repair/washing-machine', btnText: 'Find out more' },
+                { id: 2, image: 'friedgeAndFreezer.jpg', title: 'Fridge & Freezer Repairs', highlightText: 'Top rated Fridge & Freezer repairs in Norwich', body: 'Keep your food from spoiling! If your freezer is faulty, don’t hesitate to call us. Our engineers are regularly trained to service all models, including freestanding, integrated and built in units from all leading manufacturers.', btnHref: '/repair/fridge-freezer', btnText: 'Find out more' },
+                { id: 3, image: 'dishwasher.jpg', title: 'Dishwasher Repairs', highlightText: 'Top rated Dishwasher repairs in Norwich', body: 'If you’re in need of a prompt dishwasher repair in the Norwich, Norfolk region look no further. We understand how time consuming it is to wash your dishes by hand and so we are committed to providing you a quick repair at a competitive price.', btnHref: '/repair/dishwasher', btnText: 'Find out more' }
             ]
         }
     },
@@ -106,10 +109,15 @@ export default {
     font-size: 14px;
     margin: 10px 0 20px;
 }
+.linkContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
 .rowBodyP {
     color: var(--body-text);;
     font-size: 16px;
 }
+.aStyle2 {margin-left: 10px;}
 
 
 /* hover */
@@ -140,7 +148,8 @@ export default {
     .rowImageContainer {margin: 0 0 -60px; width: 80%; height: auto; }
     .servicesRow {padding: 90px 30px 30px;}
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     .aStyle1 {width: 100%;}
+    .aStyle2 {margin-top: 10px; margin-left: 0;}
 }
 </style>
