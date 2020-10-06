@@ -23,7 +23,7 @@
     <WhatWeFix
     :title="'All types of Dishwasher problems resolved'"
     :subTitle="'There a multiple things that can go wrong, and we can fix them!'"
-    :body="`If you are experiencing any of the issues seen bellow, or even something different. We assure our services are for you. We keep stock of common parts that go wrong for many brands of Dishwashers, and if dont have the part you need, we have a quick supply network that can get us the parts needed within a couple days.`"
+    :body="`If you are experiencing any of the issues seen bellow, or even something different. We assure our services are for you. We keep stock of common parts that go wrong for many brands of Dishwashers, and if we dont have the part you need, we have a supply network that can get us the parts needed within a couple days.`"
     :issuesArray="issuesArray"
     :image="'dishwasher.jpg'"/> 
     <SlantBottom/>
