@@ -1,7 +1,7 @@
 <template>
   <header class="headerCon">
       <div class="headerWrap globWrap">
-            <nuxt-link to="/" class="siteLogo"><img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo"></nuxt-link>
+            <nuxt-link to="/" class="siteLogo"><img class="siteLogo" src="../../assets/images/logo.svg" alt="Anyrep Logo" data-not-lazy></nuxt-link>
             <button class="navigationBtn" v-on:click="$store.commit('toggleNavigation')"><img src="../../assets/images/hamburger.svg" alt=""></button>
             <ul class="headerUl">
                 <li><nuxt-link to="/">Home</nuxt-link></li>

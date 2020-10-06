@@ -88,7 +88,7 @@
                         <p class="boxTitle">Please check the box to proceed</p>
                         <div class="checkboxContainer">
                             <input id="checkbox" type="checkbox" v-model="termsAccepted">
-                            <label for="checkbox">I agree to the <nuxt-link to="/terms-conditions" target="_blank">terms & conditions</nuxt-link></label> 
+                            <label for="checkbox">I agree to the following information is correct</label> 
                         </div>
                     </div>
                     <div class="infoContainer">
@@ -469,7 +469,7 @@ export default {
                         this.sending = false
                     })
                 } else {
-                    this.errorMsg = 'You must agree to the terms and conditions before proceeding!'
+                    this.errorMsg = 'Make sure to click the checkbox!'
                 }
             } else {
                 // Reset errors

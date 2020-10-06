@@ -12,12 +12,12 @@
                         <div class="testimonialCard swiper-slide" :key="testimonial.id" v-for="testimonial in testimonials">
                             <div class="testimonialCardInner">
                                 <div class="profileHolder">
-                                    <img src="../../assets/images/testimonial.jpg" alt="Testimonial Image">
+                                    <img src="../../assets/images/testimonial.jpg" alt="Testimonial Image" data-not-lazy>
                                 </div>
                                 <div class="textArea">
                                     <h4 class="testTitle">{{testimonial.name}}</h4>
                                     <p class="testBody">{{testimonial.body}}</p>
-                                    <img class="ratingImg" src="../../assets/images/rating.png" alt="">
+                                    <img class="ratingImg" src="../../assets/images/rating.png" alt="Testimonial Rating" data-not-lazy>
                                 </div>
                             </div>
                         </div>

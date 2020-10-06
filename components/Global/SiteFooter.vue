@@ -26,8 +26,6 @@
                         <nuxt-link to="/book">Book</nuxt-link>
                         <nuxt-link to="/store">Store</nuxt-link>
                         <nuxt-link to="/contact">Contact</nuxt-link>
-                        <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link>
-                        <nuxt-link to="/terms-conditions">Terms & Conditions</nuxt-link>
                         <a href="https://www.facebook.com/anyrep/" target="_blank">Facebook</a>
                         <a href="https://www.yell.com/biz/anyrep-domestic-and-commercial-appliance-repairs-norwich-7112578/" target="_blank">Yell</a>
                         <nuxt-link to="/sitemap.xml">Sitemap</nuxt-link>

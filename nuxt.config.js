@@ -33,15 +33,41 @@ export default {
   buildModules: [
   ],
   modules: [
+    'nuxt-lazy-load',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
 
   ],
+  robots: {
+    UserAgent: '*'
+
+  },
   sitemap: {
     hostname: 'https://anyrep.com',
     gzip: true,
 
+  },
+  pwa: { 
+    workbox: {}, 
+    meta: { 
+      name: 'Anyrep',
+      theme_color: '#090815', 
+      author: 'William Yallop',
+      lang: 'en', 
+      nativeUI: true,
+      description: "Book appliance repairs online with Anyrep!",
+    }, 
+    icon: {},
+    manifest: { 
+      name: 'Anyrep', 
+      short_name: 'Anyrep', 
+      lang: 'en', 
+      display: 'standalone',
+      background_color: '#090815',
+      theme_color: '#090815'
+    } 
   },
   axios: {},
   build: {

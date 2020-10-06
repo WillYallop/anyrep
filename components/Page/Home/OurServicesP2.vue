@@ -3,7 +3,8 @@
         <div class="compWrap globWrap oddPad">
 
             <div class="servicesRowContainer" :key="service.id" v-for="service in services"> 
-                <div class="rowImageContainer" :style="{ backgroundImage: `url(${getImageUrl(service.image)})` }">
+                <div class="rowImageContainer">
+                    <img :src="getImageUrl(service.image)" :alt="service.title + 'image'">
                     <div class="rowImageOverlay">
                         <img src="../../../assets/images/chevron-right.svg" :alt="`Got to ` + service.title + `'s page`" v-on:click="$router.push(service.btnHref)">
                     </div>
@@ -77,9 +78,7 @@ export default {
     margin-bottom: 20px;
     background-color: #CEF7DD;
     border-radius: 10px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +87,14 @@ export default {
     content: '';
     display: block;
     padding-bottom: 60%;
+}
+.rowImageContainer img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 10px;
+    position: relative;
+
 }
 
 .servicesRow {
@@ -121,24 +128,27 @@ export default {
 
 /* hover */
 .rowImageOverlay {
-    width: 0px;
-    height: 0px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(2, 141, 233, 0.6);
     transition: 0.3s;
-    border-radius: 50%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 .rowImageOverlay img {
     height: 20px;
     cursor: pointer;
 }
 .rowImageContainer:hover .rowImageOverlay {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
     opacity: 1;
 }
 
