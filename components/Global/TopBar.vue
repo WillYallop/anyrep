@@ -14,7 +14,7 @@
               <img class="phoneImg" src="../../assets/images/phoneIcon.svg" alt="Call us now!">
               <a href="tel:07525150999">07525 15099</a>
             </div>
-            <div class="linkCon">
+            <div class="linkCon hideMobile">
               <img src="../../assets/images/emailIcon.svg" alt="Email us now!">
               <a href="mailto:anyrep@gmail.com">anyrep@gmail.com</a>
             </div>
@@ -88,6 +88,9 @@ export default {
   margin-left: 20px;
 }
 @media only screen and (max-width: 768px) {
-  .rightCol {display: none;}
+  .topbarWrap {justify-content: flex-end;}
+  .leftCol {display: none;}
+  .hideMobile {display: none;}
+  .linkCon:first-child {margin-left: 0;}
 }
 </style>
