@@ -63,16 +63,9 @@ export default {
 .compWrap {
     flex-wrap: wrap;
 }
-.componentTitle {
-    color: #0A0A0A;
-}
-.componentBody {
-    color: #0A0A0A;
-}
 .testimonialHeader {
     width: 100%;
     background-color: var(--even-bg-box-color);
-    border: 1px solid #F6F6F6;
     padding: 30px;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -99,7 +92,6 @@ export default {
 }
 .testimonialCardInner {
     background-color: var(--even-bg-box-color);
-    border: 1px solid #F6F6F6;
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
@@ -109,7 +101,7 @@ export default {
     height: 100%;
     width: 100px;
     min-width: 100px;
-    background-color: #F6F6F6;
+    background-color: var(--main-bg-color);
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -125,11 +117,11 @@ export default {
 .testTitle {
     margin-bottom: 10px;
     font-size: 20px;
-
-}
+    color: var(--title-text);
+}   
 .testBody {
     margin-bottom: 10px;
- 
+    color: var(--body-text);
 }
 .ratingImg {
     height: 15px;

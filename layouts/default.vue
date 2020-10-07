@@ -3,20 +3,18 @@
 
     <MobileNavigation/>
     <div class="pageGroup" :class="{ 'navActive' : navStatus }">
+      <div v-if="popUp" class="sitePopup">
+        <div class="globWrap">
+          <h4>Keeping Ahead of COVID-19</h4>
+          <button v-on:click="$store.commit('hideCovidPopUp')" class="closeBtn">close</button>
+        </div>
+      </div>
       <TopBar/>
       <Nuxt/>
     </div>
-    <!-- <div v-if="$route.path != '/book' && $route.path != '/store' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div> -->
+    <div v-if="$route.path != '/book' && $route.path != '/store' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
     <button v-show="scrollPos > 200 || navStatus" v-on:click="$store.commit('toggleNavigation')" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
   
-    <div v-if="popUp & scrollPos < 200" class="sitePopup">
-      <div class="globWrap">
-        <h4>Keeping Ahead of COVID-19</h4>
-        <p>Rest assured Anyrep is taking all necessary precuations to counter the spread of COVID-19!</p>
-        <button v-on:click="$store.commit('hideCovidPopUp')" class="closeBtn">close</button>
-      </div>
-    </div>
-
   </div>
 </template>
 
@@ -72,10 +70,8 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'open-sanse', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -92,9 +88,9 @@ body {
   overflow-x: hidden;
   background-color: #F3F7FF;
 }
-textarea {font-family: 'Lato', sans-serif;}
+textarea {font-family: 'open-sanse', sans-serif;}
 textarea:focus {outline: none; border: none;}
-input {font-family: 'Lato', sans-serif;}
+input {font-family: 'open-sanse', sans-serif;}
 input:focus {outline: none; border: none;}
 button:focus {outline: none; border: none;}
 *,
@@ -195,8 +191,8 @@ button:focus {outline: none; border: none;}
   --main-accent-color: #EB0F0F;
   --secondary-bg-color: #0075C3;
 
-  --even-bg-box-color: #FFF;
-  --even-bg-highlight-text: #0075C3;
+  --even-bg-box-color: #201C42;
+  --even-bg-highlight-text: #028DE9;
   
   --title-text: #FFF;
   --highlight-text: #028DE9;
@@ -212,7 +208,7 @@ button:focus {outline: none; border: none;}
   bottom: -100px;
   right: 0;
   z-index: 0;
-  background-image: url('../assets/images/siteBackground.jpeg');
+  background-image: url('../assets/images/siteBackgroundOp.jpg');
   background-size: cover;
   background-position: center;
   transition: right 0.3s;
@@ -239,7 +235,7 @@ button:focus {outline: none; border: none;}
   bottom: 20px;
   right: 20px;
   border: none;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--main-accent-color);
   z-index: 1020;
   cursor: pointer;
 }
@@ -249,11 +245,6 @@ button:focus {outline: none; border: none;}
 
 /* Site Popup */
 .sitePopup {
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #EB0F0F;
   height: auto;
   z-index: 1010;
@@ -263,27 +254,25 @@ button:focus {outline: none; border: none;}
 }
 .sitePopup .globWrap {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .sitePopup h4 {
-  font-size: 20px;
+  font-size: 18px;
   color: #FFF;
-  margin: 0 0 10px;
-  padding: 0;
 }
 .sitePopup p {
   font-size: 16px;
   color: #FFF;
-  margin: 0 0 5px;
-  padding: 0;
 }
 .closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 40px;
+
+
+  color: #FFF;
   background: transparent;
   border: none;
   font-size: 14px;
-  color: #FFF;
   cursor: pointer;
   text-decoration: underline;
 }

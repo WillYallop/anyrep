@@ -53,15 +53,12 @@ export default {
 /* Header */
 .accHeader {
     background-color: var(--even-bg-box-color);
-    border: 1px solid #F6F6F6;
     padding: 30px;
     border-radius: 20px;
     z-index: 1;
     position: relative;
 }
-.componentTitle {
-    color: #0A0A0A;
-}
+
 .subHeadingHighlight {
     color: var(--even-bg-highlight-text);
     font-size: 14px;
@@ -69,8 +66,7 @@ export default {
 }
 /* Accordion */
 .accCon {
-    background-color: var(--even-bg-box-color);
-    border: 1px solid #F6F6F6;
+    background-color: var(--main-bg-color);
     padding: 30px;
     border-radius: 20px;
     margin-top: 20px;
@@ -78,18 +74,20 @@ export default {
     position: relative;
 }
 .accCon .row {
-    background-color: #F6F6F6;
+    background-color: var(--even-bg-box-color);
     margin-bottom: 10px;
     border-radius: 10px;
 }
 .rowHead {
     padding: 15px;
     cursor: pointer;
+    color: var(--title-text);
 }
 
 .rowBody {
     padding: 10px 15px 15px;
     display: none;
+    color: var(--body-text);
 }
 .rowBody.active {
     display: block;

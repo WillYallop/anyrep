@@ -35,15 +35,8 @@ export default {
     display: flex;
     flex-direction: column;
     background-color: var(--even-bg-box-color);
-    border: 1px solid #F6F6F6;
     border-radius: 20px;
     padding: 30px;
-}
-.componentTitle {
-    color: #0A0A0A;
-}
-.componentBody {
-    color: #0A0A0A;
 }
 .subHeadingHighlight {
     color: var(--even-bg-highlight-text);
