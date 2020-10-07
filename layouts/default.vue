@@ -12,7 +12,10 @@
       <TopBar/>
       <Nuxt/>
     </div>
-    <div v-if="$route.path != '/book' && $route.path != '/store' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }"><div class="sBgInner"></div></div>
+    <div v-if="$route.path != '/book' && $route.path != '/book/' && $route.path != '/store' && $route.path != '/store/' && $router.currentRoute.name != 'store-product-id'" class="siteBackground" :class="{ 'navActive' : navStatus }">
+      <img src="../assets/images/siteBackgroundOp.webp" alt="Website Background" class="siteBgImg">
+      <div class="sBgInner"></div>
+    </div>
     <button v-show="scrollPos > 200 || navStatus" v-on:click="$store.commit('toggleNavigation')" class="toggleNavBtn"><img src="../assets/images/hamburger.svg" alt="Toggle Navigation"></button>
   
   </div>
@@ -208,13 +211,15 @@ button:focus {outline: none; border: none;}
   bottom: -100px;
   right: 0;
   z-index: 0;
-  background-image: url('../assets/images/siteBackgroundOp.jpg');
-  background-size: cover;
-  background-position: center;
   transition: right 0.3s;
 }
 .siteBackground.navActive {
   right: calc(100% - 80px);
+}
+.siteBackground img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .sBgInner {
   position: absolute;

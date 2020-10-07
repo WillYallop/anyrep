@@ -40,7 +40,7 @@ const mutations = {
         state.book.personal.fName = data;
     },
     setLName(state, data) {
-        state.book.personal.LName = data;
+        state.book.personal.lName = data;
     },
     setPostCode(state, data) {
         state.book.personal.postCode = data;
