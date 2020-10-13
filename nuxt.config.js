@@ -50,6 +50,7 @@ export default {
 
   },
   pwa: { 
+    workbox: true,
     icon: {
       fileName: 'icon.png'
     },
