@@ -9,7 +9,7 @@
     :title="'Dont hesitate to contact or book with us!'"
     :title2="''"
     :subTitle="`If you are experiencing any problems with your domestic or commercial appliances then don't hesitate to contact us today!`"
-    :buttons="[{id: 1, href: '/book', text: 'Book Now'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :buttons="[{id: 1, href: '/book/', text: 'Book Now'}, {id: 2, href: '/store/', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->
@@ -66,8 +66,15 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Book online with Anyrep for same or next day appliance repairs. Providing our guaranteed repair services across the Norwich and Norfolk area at a competitive price.'
-      }
+      },
+
     ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://anyrep.co.uk/contact'
+      }
+    ]
   },
   mounted() {
 

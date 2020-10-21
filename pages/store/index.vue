@@ -9,7 +9,7 @@
         :title="'We sell refurbished and new appliances!'"
         :title2="''"
         :subTitle="`If you are looking for a refurbished appliance that works like new, but doesn't break the bank. Then look no further!`"
-        :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/book', text: 'Book Now'}]"/>
+        :buttons="[{id: 1, href: '/contact/', text: 'Contact Us'}, {id: 2, href: '/book/', text: 'Book Now'}]"/>
         <SlantBottom/>
         
         <!-- Products -->

@@ -6,7 +6,7 @@
                 <!-- Opening Hours -->
                 <div class="openingCol">
                     <p class="componentBody">Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier.</p>
-                    <nuxt-link to='/book' class="quoteLink">Book Now</nuxt-link>
+                    <nuxt-link to='/book/' class="quoteLink">Book Now</nuxt-link>
 
                     <div class="businessInfoCon">
                         <h2 class="componentTitle">Address:</h2>
@@ -23,25 +23,25 @@
                     <div class="col">
                         <p class="componentTitle">Links</p>
                         <nuxt-link to="/">Home</nuxt-link>
-                        <nuxt-link to="/book">Book</nuxt-link>
-                        <nuxt-link to="/store">Store</nuxt-link>
-                        <nuxt-link to="/contact">Contact</nuxt-link>
+                        <nuxt-link to="/book/">Book</nuxt-link>
+                        <nuxt-link to="/store/">Store</nuxt-link>
+                        <nuxt-link to="/contact/">Contact</nuxt-link>
                         <a href="https://www.facebook.com/anyrep/" target="_blank" rel="noopener">Facebook</a>
                         <a href="https://www.yell.com/biz/anyrep-domestic-and-commercial-appliance-repairs-norwich-7112578/" target="_blank" rel="noopener">Yell</a>
-                        <a href="https://anyrep.co.uk/sitemap.xml">Sitemap</a>
+                        <a href="https://anyrep.co.uk/sitemap.xml/">Sitemap</a>
                     </div>
                     <div class="col">
                         <p class="componentTitle">Appliance Repair Services</p>
-                        <nuxt-link to="/washing-machine-repairs">Washing Machines Repairs</nuxt-link>
-                        <nuxt-link to="/fridge-and-freezer-repairs">Fridge / Freezer Repairs</nuxt-link>
-                        <nuxt-link to="/dishwasher-repairs">Dishwasher Repairs</nuxt-link>
-                        <nuxt-link to="/tumble-dryer-repairs">Tumble Dryer Repairs</nuxt-link>
-                        <nuxt-link to="/cooker-repairs">Cooker Repairs</nuxt-link>
-                        <nuxt-link to="/hob-repairs">Hob Repairs</nuxt-link>
-                        <nuxt-link to="/commercial-appliance-repairs">Commercial Appliance Repairs</nuxt-link>
-                        <nuxt-link to="/extractor-hood-repairs">Extractor Hood Repairs</nuxt-link>
-                        <nuxt-link to="/hoover-repairs">Hoover Repairs</nuxt-link>
-                        <nuxt-link to="/microwave-repairs">Microwave Repairs</nuxt-link>
+                        <nuxt-link to="/washing-machine-repairs/">Washing Machines Repairs</nuxt-link>
+                        <nuxt-link to="/fridge-and-freezer-repairs/">Fridge / Freezer Repairs</nuxt-link>
+                        <nuxt-link to="/dishwasher-repairs/">Dishwasher Repairs</nuxt-link>
+                        <nuxt-link to="/tumble-dryer-repairs/">Tumble Dryer Repairs</nuxt-link>
+                        <nuxt-link to="/cooker-repairs/">Cooker Repairs</nuxt-link>
+                        <nuxt-link to="/hob-repairs/">Hob Repairs</nuxt-link>
+                        <nuxt-link to="/commercial-appliance-repairs/">Commercial Appliance Repairs</nuxt-link>
+                        <nuxt-link to="/extractor-hood-repairs/">Extractor Hood Repairs</nuxt-link>
+                        <nuxt-link to="/hoover-repairs/">Hoover Repairs</nuxt-link>
+                        <nuxt-link to="/microwave-repairs/">Microwave Repairs</nuxt-link>
                     </div>
                 </div>
             </div>

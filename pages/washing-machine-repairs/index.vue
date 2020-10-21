@@ -9,7 +9,7 @@
     :title="'Need your Washing'"
     :title2="'Machine repaired?'"
     :subTitle="`Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier!`"
-    :buttons="[{id: 1, href: '/book', text: 'Book Now'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :buttons="[{id: 1, href: '/book/', text: 'Book Now'}, {id: 2, href: '/store/', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->
@@ -105,8 +105,15 @@ export default {
         hid: 'description',
           name: 'description',
         content: 'Book your washing machine repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
-      }
+      },
+
     ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://anyrep.co.uk/washing-machine-repairs'
+      }
+    ]
   },
   mounted() {
 

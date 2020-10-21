@@ -9,7 +9,7 @@
     :title="'Beccles Appliance'"
     :title2="'Repair Specialist'"
     :subTitle="`Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier!`"
-    :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :buttons="[{id: 1, href: '/contact/', text: 'Contact Us'}, {id: 2, href: '/store/', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->
@@ -96,6 +96,12 @@ export default {
         content: 'Book online with Anyrep today for same or next day appliance repairs Beccles! Over 25 years experience, guaranteed repairs with no hidden costs.'
       }
     ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://anyrep.co.uk/appliance-repair-beccles'
+      }
+    ]
   },
   mounted() {
 

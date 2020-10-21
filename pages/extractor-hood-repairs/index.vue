@@ -9,7 +9,7 @@
     :title="'We can repair any Extractor Hood brand!'"
     :title2="''"
     :subTitle="`If you have a faulty Extractor Hood, don't hesitate to call Anyrep today to get it fixed! Or view our store for an instant solution!`"
-    :buttons="[{id: 1, href: '/book', text: 'Book Now'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :buttons="[{id: 1, href: '/book/', text: 'Book Now'}, {id: 2, href: '/store/', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->
@@ -105,8 +105,15 @@ export default {
         hid: 'description',
           name: 'description',
         content: 'Book your extractor hood repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
-      }
+      },
+
     ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://anyrep.co.uk/extractor-hood-repairs'
+      }
+    ]
   },
   mounted() {
 

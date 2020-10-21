@@ -21,7 +21,7 @@
                                     <img class="cardImg" src="../../../assets/images/washingMachine.jpg" alt="Washing Machine Repairs">
                                     <p class="cardTitleP">Washing Machine Repair {{town}}</p>
                                     <p class="cardBodyP">Blocked pumps, failing to spin, not draining, stuck door, leaking, noisy drum, broken seal. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/washing-machine-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/washing-machine-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                                     <img class="cardImg" src="../../../assets/images/friedgeAndFreezer.jpg" alt="Fridge Freezer Repairs">
                                     <p class="cardTitleP">Fridge Freezer Repair {{town}}</p>
                                     <p class="cardBodyP">Not making ice, ice on back wall, leaking, condensation inside, not cold, no light. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/fridge-and-freezer-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/fridge-and-freezer-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <img class="cardImg" src="../../../assets/images/dishwasher.jpg" alt="Dishwasher Repairs">
                                     <p class="cardTitleP">Dishwasher Repair {{town}}</p>
                                     <p class="cardBodyP">Blocked pumps, hinge stuck, broken panels, leaking, dishes not clean, load noises. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/dishwasher-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/dishwasher-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                     <img class="cardImg" src="../../../assets/images/tumbledyrer.jpg" alt="Tumble Dryer Repairs">
                                     <p class="cardTitleP">Tumble Dryer Repair {{town}}</p>
                                     <p class="cardBodyP">Noisy operation, no drum action, clothes not dry, snapped belt, leaking, timer not working. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/tumble-dryer-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/tumble-dryer-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                     <img class="cardImg" src="../../../assets/images/cooker.jpg" alt="Cooker Repairs">
                                     <p class="cardTitleP">Cooker Repair {{town}}</p>
                                     <p class="cardBodyP">Not heating, broken door, broken seal, broken timer, smells of gas, broken thermostat. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/tumble-dryer-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/tumble-dryer-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>       
@@ -76,7 +76,7 @@
                                     <img class="cardImg" src="../../../assets/images/hob.jpg" alt="Hob Repairs">
                                     <p class="cardTitleP">Hob Repair {{town}}</p>
                                     <p class="cardBodyP">Gas not lighting, gas not flowing, broken element, cracked glass, not getting hot. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/hob-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/hob-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>     
@@ -87,7 +87,7 @@
                                     <img class="cardImg" src="../../../assets/images/extractorHood.jpg" alt="Extractor Hood Repairs">
                                     <p class="cardTitleP">Extractor Repair {{town}}</p>
                                     <p class="cardBodyP">Lights not working, not extracting, broken fan motor, damaged exterior, old filter. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/extractor-hood-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/extractor-hood-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>                  
@@ -98,7 +98,7 @@
                                     <img class="cardImg" src="../../../assets/images/commercialAppliances.jpg" alt="Commercial Appliance Repairs">
                                     <p class="cardTitleP">Commercial Repair {{town}}</p>
                                     <p class="cardBodyP">Refrigerators, Ovens, Fryers, Cookers, Freezers & Icemakers, Washers, Coolers. We fix the all!</p>
-                                    <nuxt-link class="aStyle1" to="/commercial-appliance-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/commercial-appliance-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                     <img class="cardImg" src="../../../assets/images/microwave.jpg" alt="Microwave Repairs">
                                     <p class="cardTitleP">Microwave Repair {{town}}</p>
                                     <p class="cardBodyP">Not running, not heating, tray not spinning, exhaust fan broken, unusual noise. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/microwave-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/microwave-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                                     <img class="cardImg" src="../../../assets/images/hoover.jpg" alt="Hoover Repairs">
                                     <p class="cardTitleP">Hoover Rerpair {{town}}</p>
                                     <p class="cardBodyP">Weak suction, broken belt, broken motor, broken filter, unusual noise. Don't worry!</p>
-                                    <nuxt-link class="aStyle1" to="/hoover-repairs">Find out more</nuxt-link>
+                                    <nuxt-link class="aStyle1" to="/hoover-repairs/">Find out more</nuxt-link>
                                 </div>
                             </div>
                         </div>

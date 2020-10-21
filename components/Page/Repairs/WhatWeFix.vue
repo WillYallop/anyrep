@@ -12,7 +12,7 @@
                     <h3 class="componentTitle">{{title}}</h3>
                     <h4 class="subHeadingHighlight">{{subTitle}}</h4>
                     <p class="componentBody">{{body}}</p>
-                    <nuxt-link class="aStyle1" to="/book">Book Now</nuxt-link >
+                    <nuxt-link class="aStyle1" to="/book/">Book Now</nuxt-link >
                 </div>
                 <div class="issuesCon">
                     <div class="issue" :key="issue.id" v-for="issue in issuesArray">

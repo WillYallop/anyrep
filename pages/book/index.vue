@@ -9,7 +9,7 @@
         :title="'Book your Appliance'"
         :title2="'repair with Anyrep!'"
         :subTitle="`Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier!`"
-        :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
+        :buttons="[{id: 1, href: '/contact/', text: 'Contact Us'}, {id: 2, href: '/store/', text: 'Store'}]"/>
         <SlantBottom/>
 
         <!-- Booking Intro -->
@@ -44,12 +44,19 @@ export default {
     head: {
         title: 'Book online with Anyrep Appliance Repairs | Norwich',
         meta: [
-        {
-            hid: 'description',
-            name: 'description',
-            content: 'Book online with Anyrep for same or next day appliance repairs. Providing our guaranteed repair services across the Norwich and Norfolk area at a competitive price.'
-        }
+            {
+                hid: 'description',
+                name: 'description',
+                content: 'Book online with Anyrep for same or next day appliance repairs. Providing our guaranteed repair services across the Norwich and Norfolk area at a competitive price.'
+            },
+
         ],
+        link: [
+            {
+                rel: 'canonical',
+                href: 'https://anyrep.co.uk/book'
+            }
+        ]
     },
     components: {
         SiteHeader,

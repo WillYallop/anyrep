@@ -9,7 +9,7 @@
     :title="'Get a quote on'"
     :title2="'your faulty appliance!'"
     :subTitle="`Book your appliance repair online with Anyrep. It takes less than a minute and couldn't be any easier!`"
-    :buttons="[{id: 1, href: '/contact', text: 'Contact Us'}, {id: 2, href: '/store', text: 'Store'}]"/>
+    :buttons="[{id: 1, href: '/contact/', text: 'Contact Us'}, {id: 2, href: '/store/', text: 'Store'}]"/>
     <SlantBottom/>
 
     <!-- Intro -->

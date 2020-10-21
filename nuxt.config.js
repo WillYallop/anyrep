@@ -2,14 +2,12 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'Anyrep Appliance Repairs Norwich | Book online for next day',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Book online with Anyrep today for same or next day appliance repairs Norfolk! Over 25 years experience, guaranteed repairs with no hidden costs.' },
       { name: 'theme-color', content: '#090815' }
     ],
     link: [
@@ -25,7 +23,7 @@ export default {
     'swiper/dist/css/swiper.css',
   ],
   plugins: [
-    {src: "~plugins/persistedstate.js", ssr: false},
+    { src: "~plugins/persistedstate.js", ssr: false },
     { src: '~/plugins/vue-awesome-swiper.js', ssr: false },
 
   ],
@@ -37,8 +35,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/pwa'
-
+    '@nuxtjs/pwa',
+    ['nuxt-canonical', { baseUrl: 'https://anyrep.co.uk' }],
   ],
   robots: {
     UserAgent: '*'
