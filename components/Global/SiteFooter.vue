@@ -9,10 +9,10 @@
                     <nuxt-link to='/book' class="quoteLink">Book Now</nuxt-link>
 
                     <div class="businessInfoCon">
-                        <h4 class="componentTitle">Address:</h4>
+                        <h2 class="componentTitle">Address:</h2>
                         <p class="componentBody">3 Montrose Court, Norwich NR7 0RY</p>
                         <div class="spacer"></div>
-                        <h4 class="componentTitle">Business Hours:</h4>
+                        <h2 class="componentTitle">Business Hours:</h2>
                         <p class="componentBody">Mon - Fri:  8:00 am - 5:00 pm</p>
                         <p class="componentBody secT">Saturday:  8:00 am - 12:00 pm</p>
                     </div>

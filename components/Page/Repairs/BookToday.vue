@@ -6,8 +6,8 @@
             </div>
             <div class="textareaCol">
                 <div class="textarea">
-                    <h4 class="componentTitle">{{title}}</h4>
-                    <h5 class="subHeadingHighlight">{{subTitle}}</h5>
+                    <h2 class="componentTitle">{{title}}</h2>
+                    <p class="subHeadingHighlight">{{subTitle}}</p>
                     <p :key="text.id" v-for="text in body" class="componentBody">{{text.body}}</p>
                 </div>
             </div>
@@ -60,6 +60,7 @@ export default {
     color: var(--highlight-text);
     font-size: 14px;
     margin: 10px 0 20px;
+    font-weight: bold;
 }
 .componentBody:last-child {
     margin-top: 10px;

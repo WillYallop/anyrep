@@ -6,19 +6,19 @@
                     <div class="iconCon">
                         <img src="../../assets/images/phoneIcon.svg" alt="Call us on 01603 433083">
                     </div>  
-                    <h4 class="componentTitle">Call us on<br>01603 433083</h4>
+                    <p class="componentTitle">Call us on<br>01603 433083</p>
                 </a>
                 <a class="col" href="tel:07525150999">
                     <div class="iconCon">
                         <img src="../../assets/images/phoneIcon.svg" alt="Call us on 07525 150 999">
                     </div>
-                    <h4 class="componentTitle">Call us on<br>07525 150999</h4>
+                    <p class="componentTitle">Call us on<br>07525 150999</p>
                 </a>
                 <a class="col" href="mailto:anyrep@gmail.com">
                     <div class="iconCon">
                         <img src="../../assets/images/emailIcon.svg" alt="Email us at anyrep@gmail.com">
                     </div>
-                    <h4 class="componentTitle">Email us at anyrep@gmail.com</h4>
+                    <p class="componentTitle">Email us at anyrep@gmail.com</p>
                 </a>
             </div>
         </div>

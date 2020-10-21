@@ -19,7 +19,7 @@
             </div>
             <!-- Contact Info Con -->
             <div class="infoCon">
-                <h4 class="componentTitle">Let us hear your message today!</h4>
+                <h2 class="componentTitle">Let us hear your message today!</h2>
                 <div class="rowCon">
                     <div class="row">
                         <div class="icon"></div>

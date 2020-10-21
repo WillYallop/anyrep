@@ -4,14 +4,14 @@
             <div class="accordionCol">
                 <!-- Header -->
                 <div class="accHeader">
-                    <h4 class="componentTitle">Frequently asked questions</h4>
-                    <h5 class="subHeadingHighlight">Some answers to commonly asked questions!</h5>
+                    <h2 class="componentTitle">Frequently asked questions</h2>
+                    <p class="subHeadingHighlight">Some answers to commonly asked questions!</p>
                 </div>
                 <!-- Accordion -->
                 <div class="accCon">
                     <div class="row" :key="accordion.id" v-for="accordion in accordionData">
                         <div class="rowHead" v-on:click="activeAccordion = accordion.id">
-                            <h4>{{accordion.title}}</h4>
+                            <h3>{{accordion.title}}</h3>
                         </div>
                         <div class="rowBody" :class="{ 'active' : activeAccordion === accordion.id }">
                             <p>{{accordion.body}}</p>
@@ -63,6 +63,7 @@ export default {
     color: var(--even-bg-highlight-text);
     font-size: 14px;
     margin: 10px 0 0;
+    font-weight: bold;
 }
 /* Accordion */
 .accCon {
@@ -82,6 +83,9 @@ export default {
     padding: 15px;
     cursor: pointer;
     color: var(--title-text);
+}
+.rowHead h3 {
+    font-size: 16px;
 }
 
 .rowBody {

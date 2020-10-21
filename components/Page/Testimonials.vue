@@ -3,8 +3,8 @@
         <div class="compWrap globWrap">
 
             <div class="testimonialHeader">
-                <h4 class="componentTitle">What our clients have to say about Anyrep</h4>
-                <h5 class="subHeadingHighlight">You can leave us a review on our facebook or Google.</h5>
+                <h2 class="componentTitle">What our clients have to say about Anyrep</h2>
+                <p class="subHeadingHighlight">You can leave us a review on our facebook or Google.</p>
             </div>
             <div class="swiperContainer">
                 <div class="swipeCon" v-swiper:mySwiper="swiperOptions">
@@ -15,7 +15,7 @@
                                     <img src="../../assets/images/testimonial.jpg" alt="Testimonial Image" data-not-lazy>
                                 </div>
                                 <div class="textArea">
-                                    <h4 class="testTitle">{{testimonial.name}}</h4>
+                                    <h3 class="testTitle">{{testimonial.name}}</h3>
                                     <p class="testBody">{{testimonial.body}}</p>
                                     <img class="ratingImg" src="../../assets/images/rating.png" alt="Testimonial Rating" data-not-lazy>
                                 </div>
@@ -74,6 +74,7 @@ export default {
     color: var(--even-bg-highlight-text);
     font-size: 14px;
     margin: 10px 0 0;
+    font-weight: bold;
 }
 /* Swiper */
 .swiperContainer {
