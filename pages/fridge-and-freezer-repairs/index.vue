@@ -16,7 +16,7 @@
     <PageIntro
     :title="'Fridge & Freezer Repairs!'"
     :subTitle="'Over 25 years of experience repairing Fridges and Freezers.'"
-    :body="`Keep your food from spoiling! If your fridge freezer is faulty, don’t hesitate to call us. Our engineers are regularly trained to service all models, including freestanding, integrated and built in units from all leading manufacturers.`"/>
+    :body="`Keep your food from spoiling! If your fridge freezer is faulty, don’t hesitate to call us.  We can do it all. We have over 25 years of experience in the trade and we can repair your refrigerator on the same day. Our engineers are regularly trained to service all models, including freestanding, integrated and built-in units from leading manufacturers.`"/>
 
     <!-- What We Fix -->
     <SlantTop/>
