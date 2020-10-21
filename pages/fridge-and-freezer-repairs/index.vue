@@ -105,7 +105,7 @@ export default {
     meta: [
       {
         hid: 'description',
-          name: 'description',
+        name: 'description',
         content: 'Book your fridge & freezer repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
       }
     ],
