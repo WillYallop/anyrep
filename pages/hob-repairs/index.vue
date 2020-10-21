@@ -104,12 +104,36 @@ export default {
           name: 'description',
         content: 'Book your hob repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
       },
-
+      {
+          hid: "og:url",
+          property: 'og:url',
+          content: 'https://anyrep.co.uk/hob-repairs/'
+      },
+      {
+          hid: "og:type",
+          property: 'og:type',
+          content: 'website'
+      },
+      {
+          hid: "og:title",
+          property: 'og:title',
+          content: 'Hob Repairs Norwich | Anyrep'
+      },
+      {
+          hid: "og:description",
+          property: 'og:description',
+          content: 'Book your hob repair online for same or next day appliance repairs. We hold stock for common parts so we can get your machine repaired the same day!'
+      },
+      {
+          hid: "og:image",
+          property: 'og:image',
+          content: 'https://anyrep.co.uk/_nuxt/img/logo.ed8952e.svg'
+      }
     ],
     link: [
       {
         rel: 'canonical',
-        href: 'https://anyrep.co.uk/hob-repairs'
+        href: 'https://anyrep.co.uk/hob-repairs/'
       }
     ]
   },

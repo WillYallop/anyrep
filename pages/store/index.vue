@@ -45,8 +45,39 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content: 'If you are looking for a new or refurbished appliance look no further. We have a range of price competetive appliances.'
+            },
+            {
+                hid: "og:url",
+                property: 'og:url',
+                content: 'https://anyrep.co.uk/store/'
+            },
+            {
+                hid: "og:type",
+                property: 'og:type',
+                content: 'website'
+            },
+            {
+                hid: "og:title",
+                property: 'og:title',
+                content: 'New & Refurbished Appliances | Anyrep | Norwich'
+            },
+            {
+                hid: "og:description",
+                property: 'og:description',
+                content: 'If you are looking for a new or refurbished appliance look no further. We have a range of price competetive appliances.'
+            },
+            {
+                hid: "og:image",
+                property: 'og:image',
+                content: 'https://anyrep.co.uk/_nuxt/img/logo.ed8952e.svg'
             }
         ],
+        link: [
+            {
+                rel: 'canonical',
+                href: 'https://anyrep.co.uk/store/'
+            }
+        ]
     },
     components: {
         SiteHeader,

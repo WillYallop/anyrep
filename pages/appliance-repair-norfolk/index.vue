@@ -95,12 +95,36 @@ export default {
         name: 'description',
         content: 'Book online with Anyrep today for same or next day appliance repairs Norfolk! Over 25 years experience, guaranteed repairs with no hidden costs.'
       },
-
+      {
+          hid: "og:url",
+          property: 'og:url',
+          content: 'https://anyrep.co.uk/appliance-repair-norfolk/'
+      },
+      {
+          hid: "og:type",
+          property: 'og:type',
+          content: 'website'
+      },
+      {
+          hid: "og:title",
+          property: 'og:title',
+          content: 'Anyrep Appliance Repairs Norfolk | Book online for next day'
+      },
+      {
+          hid: "og:description",
+          property: 'og:description',
+          content: 'Book online with Anyrep today for same or next day appliance repairs Norfolk! Over 25 years experience, guaranteed repairs with no hidden costs.'
+      },
+      {
+          hid: "og:image",
+          property: 'og:image',
+          content: 'https://anyrep.co.uk/_nuxt/img/logo.ed8952e.svg'
+      }
     ],
     link: [
       {
         rel: 'canonical',
-        href: 'https://anyrep.co.uk/appliance-repair-norfolk'
+        href: 'https://anyrep.co.uk/appliance-repair-norfolk/'
       }
     ]
   },
