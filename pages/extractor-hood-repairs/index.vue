@@ -99,7 +99,7 @@ export default {
     }
   },
   head: {
-    title: 'Extractor Hood Repairs | Anyrep | Norwich',
+    title: 'Extractor Hood Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

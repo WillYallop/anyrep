@@ -98,7 +98,7 @@ export default {
     }
   },
   head: {
-    title: 'Commercial Appliance Repairs | Anyrep | Norwich',
+    title: 'Commercial Appliance Repairs Norwich| Anyrep',
     meta: [
       {
         hid: 'description',

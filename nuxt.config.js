@@ -2,14 +2,14 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'Anyrep Appliance Repairs | Book online | Norwich',
+    title: 'Anyrep Appliance Repairs Norwich | Book online for next day',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Book online with Anyrep for same or next day appliance repairs. Providing our guaranteed repair services across the Norwich and Norfolk area at a competitive price.' },
+      { hid: 'description', name: 'description', content: 'Book online with Anyrep today for same or next day appliance repairs Norfolk! Over 25 years experience, guaranteed repairs with no hidden costs.' },
       { name: 'theme-color', content: '#090815' }
     ],
     link: [

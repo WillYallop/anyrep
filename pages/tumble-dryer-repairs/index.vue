@@ -99,7 +99,7 @@ export default {
     }
   },
   head: {
-    title: 'Tumble Dryer Repairs | Anyrep | Norwich',
+    title: 'Tumble Dryer Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

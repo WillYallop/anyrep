@@ -98,7 +98,7 @@ export default {
     }
   },
   head: {
-    title: 'Microwave Repairs | Anyrep | Norwich',
+    title: 'Microwave Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

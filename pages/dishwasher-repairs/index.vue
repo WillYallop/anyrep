@@ -100,7 +100,7 @@ export default {
     }
   },
   head: {
-    title: 'Dishwasher Repairs | Anyrep | Norwich',
+    title: 'Dishwasher Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

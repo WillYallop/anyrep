@@ -99,7 +99,7 @@ export default {
     }
   },
   head: {
-    title: 'Washing Machine Repairs | Anyrep | Norwich',
+    title: 'Washing Machine Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

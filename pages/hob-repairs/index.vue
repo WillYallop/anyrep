@@ -97,7 +97,7 @@ export default {
     }
   },
   head: {
-    title: 'Hob Repairs | Anyrep | Norwich',
+    title: 'Hob Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

@@ -98,7 +98,7 @@ export default {
     }
   },
   head: {
-    title: 'Hoover Repairs | Anyrep | Norwich',
+    title: 'Hoover Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

@@ -101,7 +101,7 @@ export default {
     }
   },
   head: {
-    title: 'Fridge & Freezer Repairs | Anyrep | Norwich',
+    title: 'Fridge & Freezer Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',

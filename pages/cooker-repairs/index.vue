@@ -99,7 +99,7 @@ export default {
     }
   },
   head: {
-    title: 'Cooker Repairs | Anyrep | Norwich',
+    title: 'Cooker Repairs Norwich | Anyrep',
     meta: [
       {
         hid: 'description',
