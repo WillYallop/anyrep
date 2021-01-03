@@ -131,7 +131,7 @@ export default {
       {
           hid: "og:image",
           property: 'og:image',
-          content: 'https://anyrep.co.uk/_nuxt/img/logo.ed8952e.svg'
+          content: 'https://drive.google.com/uc?export=view&id=1Zuwa1GignayLp8G7HujEO7LAVv_gV0D3'
       }
     ],
     link: [

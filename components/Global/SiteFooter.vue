@@ -26,8 +26,8 @@
                         <nuxt-link to="/book/">Book</nuxt-link>
                         <nuxt-link to="/store/">Store</nuxt-link>
                         <nuxt-link to="/contact/">Contact</nuxt-link>
-                        <a href="https://www.facebook.com/anyrep/" target="_blank" rel="noopener">Facebook</a>
-                        <a href="https://www.yell.com/biz/anyrep-domestic-and-commercial-appliance-repairs-norwich-7112578/" target="_blank" rel="noopener">Yell</a>
+                        <a href="https://www.facebook.com/anyrep/">Facebook</a>
+                        <a href="https://www.yell.com/biz/anyrep-domestic-and-commercial-appliance-repairs-norwich-7112578/">Yell</a>
                         <a href="https://anyrep.co.uk/sitemap.xml/">Sitemap</a>
                     </div>
                     <div class="col">
@@ -50,8 +50,8 @@
             </div>
         </div>
         <div class="copyrightBar">
-            <p>Anyrep Domestic & Commercial Appliance Repairs   2020. All Rights Reserved.</p>
-            <p>Made by <a href="https://williamyallop.com" target="_blank" rel="noopener">William Yallop</a></p>
+            <p>Anyrep Domestic & Commercial Appliance Repairs 2021. All Rights Reserved.</p>
+            <p>Made by <a href="https://williamyallop.com">William Yallop</a></p>
         </div>
     </footer>
 </template>
