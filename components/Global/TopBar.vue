@@ -12,7 +12,7 @@
             </div>
             <div class="linkCon">
               <img class="phoneImg" src="../../assets/images/phoneIcon.svg" alt="Call us now!">
-              <a href="tel:07525150999">07525 15099</a>
+              <a href="tel:07525150999">07525 150999</a>
             </div>
             <div class="linkCon hideMobile">
               <img src="../../assets/images/emailIcon.svg" alt="Email us now!">
